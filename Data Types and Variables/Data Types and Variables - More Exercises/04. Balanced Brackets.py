@@ -1,6 +1,5 @@
 n = int(input())
 
-previous_bracket = ''
 balance = 1
 brackets = ["(", ")"]
 pair = ''
@@ -8,7 +7,6 @@ pair = ''
 for i in range(1, n + 1):
     bracket = input()
     if bracket in brackets:
-        previous_bracket = bracket
         pair += bracket
         if pair == "()":
             balance = 0
