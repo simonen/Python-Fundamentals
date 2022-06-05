@@ -2,28 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1abac84-37e8-4099-bf94-d7eed0793677" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise/01. Jenny's Secret Message.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise/02. Drink Something.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise/03. Chat Codes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise/04. Maximum Multiple.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise/05. Orders.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise/06. String Pureness.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise/07. Double Char.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise/08. How Much Coffee Do You Need.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise/09. Sorting Hat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise/10. Mutate Strings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise/11. Easter Bread.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise/12. Christmas Spirit.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - More Exercise/01. Find The Largest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - More Exercise/02. Find The Capitals.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - More Exercise/03. Wolf In Sheep's Clothing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - Exercise/10. Gladiator Expenses.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops - Lab/01. Number Definer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Lab/01. Number Definer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops - Lab/03. Word Reverse.py" beforeDir="false" afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Lab/03. Word Reverse.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops - Lab/04. Even Numbers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Lab/04. Even Numbers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops - Lab/05. Number Between 1 and 100.py" beforeDir="false" afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Lab/05. Number Between 1 and 100.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops - Lab/06. Shopping.py" beforeDir="false" afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Lab/06. Shopping.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops - Lab/07. Patterns.py" beforeDir="false" afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Lab/07. Patterns.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - Exercise/04. Sum of Chars.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - Exercise/04. Sum of Chars.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - Exercise/09. Snowballs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - Exercise/09. Snowballs.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +21,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -61,8 +51,8 @@
       <recent name="C:\Users\jondoe\PycharmProjects\PythonFundamentals\Data Types and Variables" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.12. Christmas Spirit">
-    <configuration name="01. Find The Largest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.10. Gladiator Expenses">
+    <configuration name="04. Sum of Chars" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonFundamentals" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -70,11 +60,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - More Exercise" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - Exercise" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - More Exercise/01. Find The Largest.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - Exercise/04. Sum of Chars.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -83,7 +73,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="03. Decrypting Messages" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="06. Next Happy Year" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonFundamentals" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -91,11 +81,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - More Exercises" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - Lab" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - More Exercises/03. Decrypting Messages.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - Lab/06. Next Happy Year.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -104,7 +94,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="04. Balanced Brackets" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="07. Water Overflow" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonFundamentals" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -112,11 +102,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - More Exercises" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - Exercise" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - More Exercises/04. Balanced Brackets.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - Exercise/07. Water Overflow.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -125,7 +115,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="12. Christmas Spirit" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="10. Gladiator Expenses" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonFundamentals" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -133,11 +123,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - Exercise" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise/12. Christmas Spirit.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - Exercise/10. Gladiator Expenses.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -146,7 +136,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonFundamentals" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -154,11 +144,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - More Exercises" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - More Exercises/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -169,11 +159,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.12. Christmas Spirit" />
-        <item itemvalue="Python.01. Find The Largest" />
-        <item itemvalue="Python.04. Balanced Brackets" />
-        <item itemvalue="Python.test" />
-        <item itemvalue="Python.03. Decrypting Messages" />
+        <item itemvalue="Python.10. Gladiator Expenses" />
+        <item itemvalue="Python.07. Water Overflow" />
+        <item itemvalue="Python.04. Sum of Chars" />
+        <item itemvalue="Python.06. Next Happy Year" />
+        <item itemvalue="Python.test (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -221,7 +211,35 @@
       <option name="project" value="LOCAL" />
       <updated>1654367409888</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Initial commit">
+      <created>1654425575817</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1654425575817</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Initial commit">
+      <created>1654428473562</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1654428473562</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Initial commit">
+      <created>1654436886560</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1654436886560</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Initial commit">
+      <created>1654448483974</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1654448483974</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -326,6 +344,11 @@
           <url>file://$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise/12. Christmas Spirit.py</url>
           <line>6</line>
           <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - Exercise/07. Water Overflow.py</url>
+          <line>3</line>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
