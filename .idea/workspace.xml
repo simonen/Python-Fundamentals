@@ -1,13 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b1abac84-37e8-4099-bf94-d7eed0793677" name="Changes" comment="" />
+    <list default="true" id="b1abac84-37e8-4099-bf94-d7eed0793677" name="Changes" comment="Initial commit">
+      <change afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise/01. Jenny's Secret Message.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise/02. Drink Something.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise/03. Chat Codes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise/04. Maximum Multiple.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise/05. Orders.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise/06. String Pureness.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise/07. Double Char.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise/08. How Much Coffee Do You Need.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise/09. Sorting Hat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise/10. Mutate Strings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise/11. Easter Bread.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise/12. Christmas Spirit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - More Exercise/01. Find The Largest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - More Exercise/02. Find The Capitals.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - More Exercise/03. Wolf In Sheep's Clothing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops - Lab/01. Number Definer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Lab/01. Number Definer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops - Lab/03. Word Reverse.py" beforeDir="false" afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Lab/03. Word Reverse.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops - Lab/04. Even Numbers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Lab/04. Even Numbers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops - Lab/05. Number Between 1 and 100.py" beforeDir="false" afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Lab/05. Number Between 1 and 100.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops - Lab/06. Shopping.py" beforeDir="false" afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Lab/06. Shopping.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops - Lab/07. Patterns.py" beforeDir="false" afterPath="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Lab/07. Patterns.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="29zhOtjWofLbQfVQKNwhRtWhjaz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -15,7 +52,130 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pythonBasics2" />
+    <property name="TF_FMT" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jondoe\PycharmProjects\PythonFundamentals\Basic Syntax Conditional Statements and Loops" />
+      <recent name="C:\Users\jondoe\PycharmProjects\PythonFundamentals\Data Types and Variables" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.12. Christmas Spirit">
+    <configuration name="01. Find The Largest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PythonFundamentals" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - More Exercise" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - More Exercise/01. Find The Largest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="03. Decrypting Messages" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PythonFundamentals" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - More Exercises" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - More Exercises/03. Decrypting Messages.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="04. Balanced Brackets" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PythonFundamentals" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - More Exercises" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - More Exercises/04. Balanced Brackets.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="12. Christmas Spirit" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PythonFundamentals" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise/12. Christmas Spirit.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PythonFundamentals" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - More Exercises" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - More Exercises/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.12. Christmas Spirit" />
+        <item itemvalue="Python.01. Find The Largest" />
+        <item itemvalue="Python.04. Balanced Brackets" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.03. Decrypting Messages" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -26,6 +186,148 @@
       <option name="presentableId" value="Default" />
       <updated>1654121793433</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1654194077471</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1654194077471</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial commit">
+      <created>1654366836121</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1654366836121</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Initial commit">
+      <created>1654366925323</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1654366925323</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Initial commit">
+      <created>1654366961092</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1654366961092</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Initial commit">
+      <created>1654367409888</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1654367409888</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Lab/05. Number Between 1 and 100.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Lab/06. Shopping.py</url>
+          <line>3</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Lab/07. Patterns.py</url>
+          <line>7</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Lab/03. Word Reverse.py</url>
+          <line>3</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise/05. Orders.py</url>
+          <line>3</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise/07. Double Char.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise/08. How Much Coffee Do You Need.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise/11. Easter Bread.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - More Exercise/03. Wolf In Sheep's Clothing.py</url>
+          <line>4</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - Lab/03. Special Numbers.py</url>
+          <line>3</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - Lab/06. Next Happy Year.py</url>
+          <line>4</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - Exercise/06. Triples of Latin Letters.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - Exercise/08. Party Profit.py</url>
+          <line>4</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - More Exercises/02. Prime Number Checker.py</url>
+          <line>3</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - More Exercises/03. Decrypting Messages.py</url>
+          <line>5</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - More Exercises/04. Balanced Brackets.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Basic Syntax Conditional Statements and Loops/Basic Syntax Conditional Statements and Loops - Exercise/12. Christmas Spirit.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
