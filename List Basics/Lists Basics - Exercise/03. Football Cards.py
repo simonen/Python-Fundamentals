@@ -16,9 +16,6 @@ for word in card_list:
         is_Stop = True
         break
 
-A_remaining = 11 - len(set(A_list))
-B_remaining = 11 - len(set(B_list))
-
-print(f"Team A - {A_remaining}; Team B - {B_remaining} ")
+print(f"Team A - {11 - len(set(A_list))}; Team B - {11 - len(set(B_list))} ")
 if is_Stop:
     print("Game was terminated")
