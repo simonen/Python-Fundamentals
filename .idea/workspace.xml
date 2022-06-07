@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1abac84-37e8-4099-bf94-d7eed0793677" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - Exercise/10. Gladiator Expenses.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/List Basics/Lists Basics - Exercise/04. Number Beggars.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/List Basics/Lists Basics - Exercise/05. Faro Shuffle.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/List Basics/Lists Basics - Exercise/06. Survival of the Biggest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/List Basics/Lists Basics - Exercise/07. Easter Gifts.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - Exercise/04. Sum of Chars.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - Exercise/04. Sum of Chars.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - Exercise/09. Snowballs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - Exercise/09. Snowballs.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,16 +45,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TF_FMT" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/List Basics/Lists Basics - Lab" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jondoe\PycharmProjects\PythonFundamentals\List Basics\Lists Basics - Lab" />
       <recent name="C:\Users\jondoe\PycharmProjects\PythonFundamentals\Basic Syntax Conditional Statements and Loops" />
       <recent name="C:\Users\jondoe\PycharmProjects\PythonFundamentals\Data Types and Variables" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.10. Gladiator Expenses">
-    <configuration name="04. Sum of Chars" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.07. Easter Gifts">
+    <configuration name="04. Number Beggars" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonFundamentals" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -60,11 +63,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - Exercise" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/List Basics/Lists Basics - Exercise" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - Exercise/04. Sum of Chars.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/List Basics/Lists Basics - Exercise/04. Number Beggars.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -73,7 +76,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="06. Next Happy Year" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="05. Faro Shuffle" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonFundamentals" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -81,11 +84,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - Lab" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/List Basics/Lists Basics - Exercise" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - Lab/06. Next Happy Year.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/List Basics/Lists Basics - Exercise/05. Faro Shuffle.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -94,7 +97,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="07. Water Overflow" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="06. Survival of the Biggest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonFundamentals" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -102,11 +105,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - Exercise" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/List Basics/Lists Basics - Exercise" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - Exercise/07. Water Overflow.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/List Basics/Lists Basics - Exercise/06. Survival of the Biggest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -115,7 +118,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="10. Gladiator Expenses" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="07. Easter Gifts" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonFundamentals" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -123,11 +126,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - Exercise" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/List Basics/Lists Basics - Exercise" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - Exercise/10. Gladiator Expenses.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/List Basics/Lists Basics - Exercise/07. Easter Gifts.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -136,7 +139,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonFundamentals" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -159,11 +162,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.10. Gladiator Expenses" />
-        <item itemvalue="Python.07. Water Overflow" />
-        <item itemvalue="Python.04. Sum of Chars" />
-        <item itemvalue="Python.06. Next Happy Year" />
-        <item itemvalue="Python.test (1)" />
+        <item itemvalue="Python.07. Easter Gifts" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.06. Survival of the Biggest" />
+        <item itemvalue="Python.05. Faro Shuffle" />
+        <item itemvalue="Python.04. Number Beggars" />
       </list>
     </recent_temporary>
   </component>
@@ -239,7 +242,49 @@
       <option name="project" value="LOCAL" />
       <updated>1654448483974</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Initial commit">
+      <created>1654450848864</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1654450848864</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Initial commit">
+      <created>1654546741893</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1654546741893</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Initial commit">
+      <created>1654546826686</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1654546826686</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Initial commit">
+      <created>1654548203540</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1654548203540</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Initial commit">
+      <created>1654553950696</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1654553950696</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Initial commit">
+      <created>1654554163785</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1654554163785</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -349,6 +394,66 @@
           <url>file://$PROJECT_DIR$/Data Types and Variables/Data Types and Variables - Exercise/07. Water Overflow.py</url>
           <line>3</line>
           <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test2.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/List Basics/Lists Basics - Lab/04. Search.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/List Basics/Lists Basics - Lab/05. Numbers Filter.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/List Basics/Lists Basics - Exercise/01. Invert Values.py</url>
+          <line>4</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/List Basics/Lists Basics - Exercise/02. Multiples List.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/List Basics/Lists Basics - Exercise/03. Football Cards.py</url>
+          <line>9</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/List Basics/Lists Basics - Exercise/04. Number Beggars.py</url>
+          <line>9</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/List Basics/Lists Basics - Exercise/04. Number Beggars.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/List Basics/Lists Basics - Exercise/05. Faro Shuffle.py</url>
+          <line>9</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/List Basics/Lists Basics - Exercise/05. Faro Shuffle.py</url>
+          <line>13</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/List Basics/Lists Basics - Exercise/07. Easter Gifts.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="56" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
