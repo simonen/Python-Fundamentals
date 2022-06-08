@@ -5,22 +5,21 @@ gift_list = gifts.split(" ")
 
 while command != "No Money":
 
-    com = command.split()
-    gift = com[1]
-    commanda = com[0]
-    if len(com) == 3:
-        given_index = int(com[2])
+    com_list = command.split()
+    gift = com_list[1]
+    if "Required" in com_list:
+        given_index = int(com_list[2])
         length = len(gift_list)
         if 0 <= given_index < length:
             gift_list.pop(given_index)
             gift_list.insert(given_index, gift)
-    if commanda == "OutOfStock":
+    if "OutOfStock" in com_list:
         for _ in range(len(gift_list)):
             if gift in gift_list:
                 g_index = gift_list.index(gift)
                 gift_list.pop(g_index)
                 gift_list.insert(g_index, "None")
-    elif commanda == "JustInCase":
+    elif "JustInCase" in com_list:
         gift_list.pop()
         gift_list.append(gift)
     command = input()
