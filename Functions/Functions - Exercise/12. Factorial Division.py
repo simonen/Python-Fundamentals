@@ -1,9 +1,8 @@
 def factorial(num):
-    fact = 1
-    for digit in range(1, num + 1):
-        fact *= digit
+    for digit in range(1, num):
+        num *= digit
 
-    return fact
+    return num
 
 
 res = factorial(int(input())) / factorial(int(input()))

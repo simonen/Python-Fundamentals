@@ -7,6 +7,6 @@ if progress < 100:
     print(f"{progress}% [{load}{dots}]")
     print("Still loading...")
 else:
-    print("100% Complete!")
-    print(f"[{load}{dots}]")
+    print("100% Complete!\n[%%%%%%%%%%]")
+
 
