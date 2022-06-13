@@ -1,5 +1,6 @@
 numbers = input().split(", ")
 
+
 def palindrome_check(number):
     for i in number:
         if i == i[::-1]:
@@ -9,4 +10,3 @@ def palindrome_check(number):
 
 
 palindrome_check(numbers)
-
