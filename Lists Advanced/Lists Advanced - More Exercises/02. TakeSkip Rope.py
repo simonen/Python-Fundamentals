@@ -19,8 +19,7 @@ taken = ""
 for j in range(0, len(take_list)):
     take = new_string[0:take_list[j]]
     taken += take
-    new_string = new_string[take_list[j]::]
-    new_string = new_string[skip_list[j]::]
+    new_string = new_string[take_list[j] + skip_list[j]::]
 
 print("".join(taken))
 
