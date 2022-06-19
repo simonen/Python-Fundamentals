@@ -12,7 +12,7 @@ while command != "3:1":
     if start_in < 0:
         start_in = 0
     ###### DIVIDE
-    if action == "divide":
+    if action == "divide" and start_in <= len(A):
         B = A.pop(start_in)
         step = int(len(B) / end_in)
         pos = start_in
