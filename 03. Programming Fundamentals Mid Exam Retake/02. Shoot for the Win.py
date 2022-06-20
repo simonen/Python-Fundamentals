@@ -1,6 +1,7 @@
-targets = list(map(int, input().split(" ")))
-
+numbers = input()
 command = input()
+
+targets = list(map(int, numbers.split(" ")))
 count = 0
 
 while command != "End":
