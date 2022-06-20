@@ -8,7 +8,6 @@ while command != "course start":
     if action == "Insert" and lesson_title not in A:
         lesson_index = int(command[2])
         A.insert(lesson_index, lesson_title)
-
     elif action == "Swap":
         lesson2_title = command[2]
         if lesson_title in A and lesson2_title in A:
