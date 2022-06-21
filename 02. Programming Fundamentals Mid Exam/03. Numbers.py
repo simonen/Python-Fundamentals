@@ -9,7 +9,3 @@ if len(last_five) > 0:
     print(last_five)
 else:
     print("No")
-
-
-
-
