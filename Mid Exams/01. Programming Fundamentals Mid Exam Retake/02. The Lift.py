@@ -1,7 +1,7 @@
 people = int(input())
 curr_lift = list(map(int, input().split(" ")))
 
-for i, cabin in enumerate(curr_lift):
+for i in range(len(curr_lift)):
     if curr_lift[i] < 4:
         diff = 4 - curr_lift[i]
         if people >= diff:
