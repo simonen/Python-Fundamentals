@@ -3,9 +3,9 @@ A = []
 
 
 def perfect(numberz):
-    for i in range(1, numberz):
-        if numberz % i == 0:
-            A.append(i)
+    for numbers in range(1, numberz):
+        if numberz % numbers == 0:
+            A.append(numbers)
 
     if sum(A) == numberz:
         return "We have a perfect number!"
