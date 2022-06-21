@@ -14,7 +14,6 @@ while command != "3:1":
     if action == "divide" and start_in <= len(A):
         string = A.pop(start_in)
         step = int(len(string) / end_in)
-        B = []
         index = start_in
         for i in range(1, end_in):
             chars = string[0:step]
