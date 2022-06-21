@@ -1,6 +1,4 @@
 A = list(input().split(" "))
-
-
 command = input()
 
 while command != "3:1":
@@ -16,7 +14,7 @@ while command != "3:1":
         step = int(len(string) / end_in)
         index = start_in
         for i in range(1, end_in):
-            chars = string[0:step]
+            chars = string[:step]
             A.insert(index, chars)
             index += 1
             string = string[step::]
