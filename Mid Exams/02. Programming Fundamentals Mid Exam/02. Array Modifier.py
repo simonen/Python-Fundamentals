@@ -19,7 +19,6 @@ while command != "end":
 
     command = input()
 
-A = list(map(str, numbers))
-A = ", ".join(A)
+A = ", ".join(map(str, numbers))
 
 print(A)
