@@ -26,6 +26,7 @@ while command != "end":
     if len(numbers) == 0:
         print(f"You have won in {turns} turns!")
         break
+
     command = input()
 else:
     print("Sorry you lose :(")
