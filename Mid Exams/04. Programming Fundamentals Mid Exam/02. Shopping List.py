@@ -9,20 +9,22 @@ while command != "Go Shopping!":
     if item_type == "Urgent":
         if item not in shop_list:
             shop_list.insert(0, item)
-    elif item_type == "Unnecessary":
-        if item in shop_list:
-            shop_list.remove(item)
+
+    if item not in shop_list:
+        command = input()
+        continue
+
+    if item_type == "Unnecessary":
+        shop_list.remove(item)
 
     elif item_type == "Rearrange":
-        if item in shop_list:
-            shop_list.remove(item)
-            shop_list.append(item)
+        shop_list.remove(item)
+        shop_list.append(item)
 
     elif item_type == "Correct":
         new_item = command[2]
-        if item in shop_list:
-            item_index = shop_list.index(item)
-            shop_list[item_index] = new_item
+        item_index = shop_list.index(item)
+        shop_list[item_index] = new_item
 
     command = input()
 
