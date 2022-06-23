@@ -1,6 +1,6 @@
 houses = list(map(int, input().split("@")))
 command = input()
-jump = 0
+
 index = 0
 
 while command != "Love!":
@@ -22,10 +22,10 @@ while command != "Love!":
 
 
 print(f"Cupid's last position was {index}.")
-failed_houses = len(houses) - houses.count(0)
 
 if sum(houses) == 0:
     print("Mission was successful.")
 else:
+    failed_houses = len(houses) - houses.count(0)
     print(f"Cupid has failed {failed_houses} places.")
 
