@@ -16,16 +16,10 @@ while command != "Craft!":
             old_item_ind = items.index(item)
             items.insert(old_item_ind + 1, new_item)
 
-    if item in items:
-        pass
-    else:
-        command = input()
-        continue
-
-    if action == "Drop":
+    if action == "Drop" and item in items:
         items.remove(item)
 
-    elif action == "Renew":
+    elif action == "Renew" and item in items:
         item_ind = items.index(item)
         renewed = items.pop(item_ind)
         items.append(renewed)
@@ -33,4 +27,5 @@ while command != "Craft!":
     command = input()
 
 items = ", ".join(items)
+
 print(items)
