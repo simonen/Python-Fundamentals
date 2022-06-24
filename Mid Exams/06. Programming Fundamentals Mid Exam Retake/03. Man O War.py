@@ -37,10 +37,9 @@ while command != "Retire":
 
     elif action == "Repair":
         repair = int(command[2])
-        if pirate_ship[index] + repair > max_health:
+        pirate_ship[index] += repair
+        if pirate_ship[index] > max_health:
             pirate_ship[index] = max_health
-        else:
-            pirate_ship[index] += repair
         command = input()
         continue
 
