@@ -23,5 +23,8 @@ else:
     max_bonus = 0
     attendance = 0
 
+
 print(f"Max Bonus: {max_bonus}.")
+print(bonus_list)
 print(f"The student has attended {attendance} lectures.")
+print(attendances_list)
