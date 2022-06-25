@@ -18,9 +18,9 @@ def min_max_f(even_odd_f, min_maxa):
 
 def exchange_f(nums, split):
     if 0 <= split <= len(nums) - 1:
-        A = nums[0:split + 1]
-        nums = nums[split + 1::]
-        nums = nums + A
+        left_side = nums[0:split + 1]
+        right_side = nums[split + 1::]
+        nums = right_side + left_side
         return nums
     else:
         return "Invalid index"
@@ -43,7 +43,7 @@ while command != "end":
 
     if action == "min" or action == "max":
         odd_even = command[1]
-        if not len(even_odd(numbers, odd_even)) > 0:
+        if len(even_odd(numbers, odd_even)) == 0:
             print("No matches")
             command = input()
             continue
