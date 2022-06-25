@@ -11,7 +11,7 @@ for student in range(1, students + 1):
     attendances = int(input())
     attendances_list.append(attendances)
     if lectures > 0:
-        total_bonus = ceil((attendances / lectures) * (5 + bonus))
+        total_bonus = (attendances / lectures) * (5 + bonus)
         bonus_list.append(total_bonus)
 
 
@@ -23,8 +23,5 @@ else:
     max_bonus = 0
     attendance = 0
 
-
-print(f"Max Bonus: {max_bonus}.")
-print(bonus_list)
+print(f"Max Bonus: {ceil(max_bonus)}.")
 print(f"The student has attended {attendance} lectures.")
-print(attendances_list)
