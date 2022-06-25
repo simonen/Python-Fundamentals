@@ -3,7 +3,6 @@ warship = list(map(int, input().split(">")))
 max_health = int(input())
 command = input()
 
-low_health = max_health * 0.2
 is_lost = False
 
 while command != "Retire":
@@ -12,7 +11,7 @@ while command != "Retire":
     action = command[0]
     if action == "Status":
         for section in pirate_ship:
-            if section < low_health:
+            if section < max_health * 0.2:
                 status.append(section)
         damaged_sections = len(status)
         print(f"{damaged_sections} sections need repair.")
