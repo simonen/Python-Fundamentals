@@ -20,8 +20,7 @@ def exchange_f(nums, split):
     if 0 <= split <= len(nums) - 1:
         left_side = nums[0:split + 1]
         right_side = nums[split + 1::]
-        nums = right_side + left_side
-        return nums
+        return right_side + left_side
     else:
         return "Invalid index"
 
