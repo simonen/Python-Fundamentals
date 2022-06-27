@@ -28,7 +28,6 @@ while command != "Report":
 
     command = input()
 
-
 blacklisted = friends.count("Blacklisted")
 lost = friends.count("Lost")
 print(f"Blacklisted names: {blacklisted}")
