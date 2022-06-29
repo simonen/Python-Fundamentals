@@ -21,6 +21,7 @@ class Employee:
         first, last, pay = emp_str.split(", ")
         return cls(first, last, pay)
 
+
 class Developer(Employee):
     def __init__(self, first, last, pay, prog_lang):
         pass
