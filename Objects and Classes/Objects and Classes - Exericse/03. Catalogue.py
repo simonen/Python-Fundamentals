@@ -1,6 +1,6 @@
 class Catalogue:
 
-    def __init__(self, name: str):
+    def __init__(self, name):
         self.name = name
         self.products = []
 
@@ -8,12 +8,12 @@ class Catalogue:
         self.products.append(product_name)
 
     def get_by_letter(self, first_letter: str):
-        lettered = [x for i, x in enumerate(self.products) if self.products[i][0] == first_letter]
-        return lettered
+        by_letter = [x for i, x in enumerate(self.products) if self.products[i][0] == first_letter]
+        return by_letter
 
     def __repr__(self):
-        print(f"Items in {self.name} catalogue: ")
-        return "\n".join(sorted(self.products))
+        joined = '\n'.join(sorted(self.products))
+        return f"Items in the {self.name} catalogue:\n{joined}"
 
 
 catalogue = Catalogue("Furniture")
