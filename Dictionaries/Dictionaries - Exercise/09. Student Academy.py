@@ -1,10 +1,3 @@
-def average_grade(grade_list):
-    count = len(grade_list)
-    suma = sum(grade_list)
-    average = suma / count
-    return average
-
-
 diary = {}
 
 for _ in range(int(input())):
@@ -14,7 +7,7 @@ for _ in range(int(input())):
         diary[student] = []
     diary[student].append(grade)
 
-
 for k, v in diary.items():
-    if average_grade(v) >= 4.50:
-        print(f"{k} -> {(average_grade(v)):.2f}")
+    average = sum(v) / len(v)
+    if average >= 4.50:
+        print(f"{k} -> {average:.2f}")
