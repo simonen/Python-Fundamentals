@@ -22,9 +22,7 @@ while command2 != "end of submissions":
     name = command2[2]
     score = int(command2[3])
     nscore = {contest: score}
-    if contest in contests.keys() and contests[contest] == password:
-        pass
-    else:
+    if contest not in contests.keys() or contests[contest] != password:
         command2 = input()
         continue
 
@@ -56,4 +54,3 @@ for s in sorted(students, key=lambda x: x[0]):
     sort_scores = sorted(submissions[s].items(), key=lambda x: x[1], reverse=True)
     for i in sort_scores:
         print(f"#  {i[0]} -> {i[1]}")
-
