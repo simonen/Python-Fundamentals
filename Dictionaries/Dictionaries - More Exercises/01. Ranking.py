@@ -13,7 +13,6 @@ while command != "end of contests":
 
 command2 = input()
 submissions = {}
-best_score = {}
 students = []
 
 while command2 != "end of submissions":
@@ -41,7 +40,6 @@ while command2 != "end of submissions":
 
     command2 = input()
 
-students.sort()
 winner = ''
 max_sum = 0
 
@@ -53,9 +51,9 @@ for s in students:
 
 print(f"Best candidate is {winner} with total {max_sum} points.")
 print("Ranking:")
-for s in students:
+for s in sorted(students, key=lambda x: x[0]):
     print(s)
-    sort_orders = sorted(submissions[s].items(), key=lambda x: x[1], reverse=True)
-    for i in sort_orders:
+    sort_scores = sorted(submissions[s].items(), key=lambda x: x[1], reverse=True)
+    for i in sort_scores:
         print(f"#  {i[0]} -> {i[1]}")
 
