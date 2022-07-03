@@ -1,5 +1,11 @@
-command = input()
+def create_side(book_f, side_f, user_f):
+    if side_f not in book_f:
+        book_f[side_f] = []
+    book[side_f].append(user_f)
+    return book_f
 
+
+command = input()
 book = {}
 users = []
 
@@ -14,9 +20,7 @@ while command != "Lumpawaroo":
             command = input()
             continue
 
-        if side not in book.keys():
-            book[side] = []
-        book[side].append(user)
+        create_side(book, side, user)
         users.append(user)
 
     elif "->" in A:
@@ -27,15 +31,11 @@ while command != "Lumpawaroo":
         if user in users:
             for k, v in book.items():
                 if user in v:
-                    index = v.index(user)
-                    v.pop(index)
+                    v.remove(user)
         else:
             users.append(user)
 
-        if side not in book.keys():
-            book[side] = []
-        book[side].append(user)
-
+        create_side(book, side, user)
         print(f"{user} joins the {side} side!")
 
     command = input()
