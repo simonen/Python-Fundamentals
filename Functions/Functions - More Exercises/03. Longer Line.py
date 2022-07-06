@@ -1,4 +1,4 @@
-import math
+from math import floor
 
 x1 = float(input())
 y1 = float(input())
@@ -16,11 +16,11 @@ b2 = abs(y3 - y4)
 
 if (a1 + b1) > (a2 + b2):
     if abs(x1) <= abs(x2) or abs(y1) <= abs(y2):
-        print(f"({math.floor(x1)}, {math.floor(y1)})({math.floor(x2)}, {math.floor(y2)})")
+        print(f"({floor(x1)}, {floor(y1)})({floor(x2)}, {floor(y2)})")
     else:
-        print(f"({math.floor(x2)}, {math.floor(y2)})({math.floor(x1)}, {math.floor(y1)})")
+        print(f"({floor(x2)}, {floor(y2)})({floor(x1)}, {floor(y1)})")
 else:
     if abs(x3) <= abs(x4) or abs(y3) <= abs(y4):
-        print(f"({math.floor(x3)}, {math.floor(y3)})({math.floor(x4)}, {math.floor(y4)})")
+        print(f"({floor(x3)}, {floor(y3)})({floor(x4)}, {floor(y4)})")
     else:
-        print(f"({math.floor(x4)}, {math.floor(y4)})({math.floor(x3)}, {math.floor(y3)})")
+        print(f"({floor(x4)}, {floor(y4)})({floor(x3)}, {floor(y3)})")
