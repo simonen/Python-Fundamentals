@@ -6,24 +6,22 @@ while command != "Once upon a time":
     name = command[0]
     color = command[1]
     physique = int(command[2])
-    name_f = {name: physique}
+
     if color not in book:
-        book[color] = name_f
-    book[color] = {**book[color], **name_f}
-    if book[color][name] < physique:
+        book[color] = {}   # create an empty nested dictionary placeholder for name: points
+    if name not in book[color] or book[color][name] < physique :
         book[color][name] = physique
 
     command = input()
 
-sort_len = sorted(book.items(), key=lambda x: len(x[1]), reverse=True)
 A = []
 
-for element in sort_len:
-    for k, v in element[1].items():
-        a = element[0], k, v
+for k, v in book.items():
+    for k1, v1 in v.items():
+        a = k, k1, v1
         A.append(a)
 
-sort_physique = sorted(A, key=lambda x: x[2], reverse=True)
+sorted_v = sorted(A, key=lambda x: (-x[2], -len(book[x[0]])))
 
-for i in sort_physique:
+for i in sorted_v:
     print(f"({i[0]}) {i[1]} <-> {i[2]}")
