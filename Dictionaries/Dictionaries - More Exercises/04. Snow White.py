@@ -9,7 +9,7 @@ while command != "Once upon a time":
 
     if color not in book:
         book[color] = {}   # create an empty nested dictionary placeholder for name: points
-    if name not in book[color] or book[color][name] < physique :
+    if name not in book[color] or book[color][name] < physique:
         book[color][name] = physique
 
     command = input()
