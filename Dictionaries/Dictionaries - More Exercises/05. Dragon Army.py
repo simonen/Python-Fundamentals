@@ -21,14 +21,8 @@ for i in range(1, n + 1):
         book[race][name] = []
     book[race][name] = dha
 
-# for i in sorted_n: # Reconstruct the dictionary from the sorted list
-#     if i[0] not in book1:
-#         book1[i[0]] = {}
-#     if i[1] not in book1[i[0]]:
-#         book1[i[0]][i[1]] = {}
-#     book1[i[0]][i[1]] = i[2]
-#     t_damage1 = 0
 
+print(book)
 for k, v in book.items():
     count = len(v)
     t_damage = 0
@@ -39,10 +33,18 @@ for k, v in book.items():
         t_damage += int(v1[0])
         t_health += int(v1[1])
         t_armor += int(v1[2])
-    a_damage = t_damage / count
-    a_health = t_health / count
-    a_armor = t_armor / count
-    print(f"{k}::({a_damage:.2f}/{a_health:.2f}/{a_armor:.2f})")
+    av_damage = t_damage / count
+    av_health = t_health / count
+    av_armor = t_armor / count
+    print(f"{k}::({av_damage:.2f}/{av_health:.2f}/{av_armor:.2f})")
 
     for k2, v2 in sorted(v.items(), key=lambda x: x):
         print(f"-{k2} -> damage: {v2[0]}, health: {v2[1]}, armor: {v2[2]}")
+
+# for i in sorted_n: # Reconstruct the dictionary from the sorted list
+#     if i[0] not in book1:
+#         book1[i[0]] = {}
+#     if i[1] not in book1[i[0]]:
+#         book1[i[0]][i[1]] = {}
+#     book1[i[0]][i[1]] = i[2]
+#     t_damage1 = 0
