@@ -13,7 +13,7 @@ x3, y3, x4, y4 = float(input()), float(input()), float(input()), float(input())
 line1 = abs(x1 - x2) + abs(y1 - y2)
 line2 = abs(x3 - x4) + abs(y3 - y4)
 
-if line1 > line2:
+if line1 >= line2:
     print(closest(x1, y1, x2, y2))
 else:
     print(closest(x3, y3, x4, y4))
