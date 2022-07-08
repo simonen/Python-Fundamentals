@@ -24,7 +24,6 @@ print(binary[::-1])
 
 index = int(input())
 binary[index] = "0"
-
 decimal = bin_dec(binary)
 
 print(binary[::-1])
