@@ -9,11 +9,10 @@ def binary_num(number_f):
 
     A = A[::-1]
     binary = ''
-    for p in range(0, len(A), 4):
-        binary += "".join(A[p:p + 4])
-        if len(A) > 4:
+    for chunks in range(0, len(A), 4):
+        binary += "".join(A[chunks:chunks + 4])
+        if len(A[chunks::]) > 4:
             binary += " "
-
     return binary
 
 
