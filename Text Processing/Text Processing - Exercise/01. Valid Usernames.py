@@ -13,4 +13,5 @@ for user in username:
             break
     if is_invalid:
         continue
+
     print(user)
