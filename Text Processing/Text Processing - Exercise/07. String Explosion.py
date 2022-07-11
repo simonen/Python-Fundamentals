@@ -4,14 +4,11 @@ power = 0
 word = ""
 
 for char in string:
-
     if char.isdigit():
         power += int(char)
-        power -= 1
+    if power == 0 or char == ">":
+        word += char
     else:
-        if power == 0 or char == ">":
-            word += char
-        else:
-            power -= 1
+        power -= 1
 
 print(word)
