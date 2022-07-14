@@ -1,7 +1,6 @@
 path = input().split("\\")
 
-filename = path[-1].split(".")
-name, ext = filename
+name, ext = path[-1].split(".")
 
 print(f"File name: {name}")
 print(f"File extension: {ext}")
