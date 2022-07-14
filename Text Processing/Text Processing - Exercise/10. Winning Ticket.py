@@ -2,14 +2,14 @@ def longest(string):
     side_a = ''
     max_a = ''
     previous = ''
-    for t in string:
-        if t in valid and t == previous:
-            side_a += t
+    for char in string:
+        if char in valid and char == previous:
+            side_a += char
             if len(side_a) >= len(max_a):
                 max_a = side_a
         else:
-            side_a = t
-        previous = t
+            side_a = char
+        previous = char
     return max_a
 
 
