@@ -1,4 +1,5 @@
 from itertools import groupby
+
 s = input()
 res = [''.join(g) for _, g in groupby(s, str.isdigit)]
 rage = ''
