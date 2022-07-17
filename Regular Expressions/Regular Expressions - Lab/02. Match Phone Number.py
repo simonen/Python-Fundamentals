@@ -2,7 +2,7 @@ import re
 
 numbers = input()
 
-match = re.finditer(r"\+359(-| )2(\1)\d{3}(\1)\d{4}\b", numbers)
+match = re.finditer(r"\+359([\-\s])2(\1)\d{3}(\1)\d{4}\b", numbers)
 res = ""
 
 for i in match:
