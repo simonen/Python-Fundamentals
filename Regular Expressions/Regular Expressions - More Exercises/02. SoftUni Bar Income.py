@@ -4,7 +4,7 @@ command = input()
 total = 0
 
 while command != "end of shift":
-    match = re.finditer(r"%([A-Z][a-z]+)%[^$.|%]*?<([a-zA-Z0-9_]+)>[^$.|%]*?\|(\d+)\|[^$.|%]*?(\d+\.?\d*)\$", command)
+    match = re.finditer(r"%([A-Z][a-z]+)%[^$.|%]*?<(\w+)>[^$.|%]*?\|(\d+)\|[^$.|%]*?(\d+\.?\d*)\$", command)
 
     for m in match:
         name = m.group(1)
