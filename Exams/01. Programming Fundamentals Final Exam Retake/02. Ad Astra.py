@@ -1,8 +1,8 @@
 import re
 
 text = input()
-match = re.findall(r"(#|\|)([a-zA-Z ]+)(\1)([0-9]{2}\/[0-9]{2}\/[0-9]{2})(\1)([0-9]{1,5})(\1)", text)
 
+match = re.findall(r"(#|\|)([a-zA-Z ]+)(\1)([0-9]{2}\/[0-9]{2}\/[0-9]{2})(\1)([0-9]{1,5})(\1)", text)
 total_calories = 0
 item_list = []
 
@@ -10,15 +10,14 @@ for m in match:
     current_item = []
     food = m[1]
     date = m[3]
-    if 0 < int(m[5]) <= 10000:
-        calories = int(m[5])
+    calories = int(m[5])
+    if 0 < calories <= 10000:
         total_calories += calories
-        current_item.append(f"Item: {food}, Best before: {date}, Nutrition: {calories}")
 
+    current_item.append(f"Item: {food}, Best before: {date}, Nutrition: {calories}")
     item_list.append(current_item)
 
 print(f"You have food to last you for: {total_calories // 2000} days!")
 
 for item in item_list:
     print("".join(item))
-
