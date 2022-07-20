@@ -1,3 +1,9 @@
+def valid_check(pieces_f, piece_f):
+    if any(piece_f in x for x in pieces_f):
+        return True
+    print(f"Invalid operation! {piece} does not exist in the collection.")
+
+
 n = int(input())
 
 pieces = []
@@ -30,21 +36,17 @@ while command != "Stop":
             print(f"{piece} is already in the collection!")
 
     elif action == "Remove":
-        if any(piece in i for i in pieces):
+        if valid_check(pieces, piece):
             pieces = [x for x in pieces if x[0] != piece]
             print(f"Successfully removed {piece}!")
-        else:
-            print(f"Invalid operation! {piece} does not exist in the collection.")
 
     elif action == "ChangeKey":
         new_key = command[2]
-        if any(piece in i for i in pieces):
+        if valid_check(pieces, piece):
             for i in range(len(pieces)):
                 if pieces[i][0] == piece:
                     pieces[i][2] = new_key
             print(f"Changed the key of {piece} to {new_key}!")
-        else:
-            print(f"Invalid operation! {piece} does not exist in the collection.")
 
     command = input()
 
