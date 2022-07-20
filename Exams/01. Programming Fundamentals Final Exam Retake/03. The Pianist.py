@@ -4,6 +4,13 @@ def valid_check(pieces_f, piece_f):
     print(f"Invalid operation! {piece} does not exist in the collection.")
 
 
+def entries_add(piece_f, composer_f, key_f, curr):
+    curr.append(piece_f)
+    curr.append(composer_f)
+    curr.append(key_f)
+    return curr
+
+
 n = int(input())
 
 pieces = []
@@ -11,10 +18,7 @@ pieces = []
 for num in range(n):
     current = []
     entries = input().split("|")
-    current.append(entries[0])
-    current.append(entries[1])
-    current.append(entries[2])
-    pieces.append(current)
+    pieces.append(entries_add(entries[0], entries[1], entries[2], current))
 
 command = input()
 
@@ -27,10 +31,7 @@ while command != "Stop":
         if not any(piece in i for i in pieces):
             composer = command[2]
             key = command[3]
-            current.append(piece)
-            current.append(composer)
-            current.append(key)
-            pieces.append(current)
+            pieces.append(entries_add(piece, composer, key, current))
             print(f"{piece} by {composer} in {key} added to the collection!")
         else:
             print(f"{piece} is already in the collection!")
@@ -46,6 +47,7 @@ while command != "Stop":
             for i in range(len(pieces)):
                 if pieces[i][0] == piece:
                     pieces[i][2] = new_key
+
             print(f"Changed the key of {piece} to {new_key}!")
 
     command = input()
