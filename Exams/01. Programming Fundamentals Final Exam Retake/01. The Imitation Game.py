@@ -8,8 +8,8 @@ while command != "Decode":
     action = command[0]
     if action == "Move":
         number = int(command[1])
-        if 0 <= number < len(A):
-            A = A[number::] + A[:number]
+        A = A[number::] + A[:number]
+
     elif action == "Insert":
         index = int(command[1])
         value = command[2]
