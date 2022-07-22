@@ -40,7 +40,6 @@ while command != "Exhibition":
     command = input()
 
 print("Plants for the exhibition:")
-
 for i, k in enumerate(plants):
     average = 0
     if len(k[2::]) > 0:
