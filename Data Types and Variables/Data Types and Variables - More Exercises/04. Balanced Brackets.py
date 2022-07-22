@@ -1,20 +1,20 @@
 n = int(input())
 
-balance = 1
 brackets = ["(", ")"]
 pair = ''
+is_balanced = False
 
 for i in range(1, n + 1):
     bracket = input()
     if bracket in brackets:
         pair += bracket
         if pair == "()":
-            balance = 0
+            is_balanced = True
             pair = ''
         else:
-            balance = 1
+            is_balanced = False
 
-if balance == 0:
+if is_balanced:
     print("BALANCED")
 else:
     print("UNBALANCED")
