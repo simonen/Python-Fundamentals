@@ -9,5 +9,4 @@ def closest_point(a1, b1, a2, b2):
 
 x1, y1, x2, y2 = float(input()), float(input()), float(input()), float(input())
 
-closest1 = closest_point(x1, y1, x2, y2)
-print(closest1)
+print(closest_point(x1, y1, x2, y2))
