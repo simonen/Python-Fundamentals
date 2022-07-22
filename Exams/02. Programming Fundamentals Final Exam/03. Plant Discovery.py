@@ -42,9 +42,8 @@ while command != "Exhibition":
 print("Plants for the exhibition:")
 
 for i, k in enumerate(plants):
+    average = 0
     if len(k[2::]) > 0:
         average = sum(map(float, k[2::])) / len(k[2::])
-    else:
-        average = 0
 
     print(f"- {k[0]}; Rarity: {k[1]}; Rating: {average:.2f}")
