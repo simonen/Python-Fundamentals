@@ -1,7 +1,7 @@
 def car_index(cars_f, car_f):
-    for i, p in enumerate(cars_f):
+    for ind, p in enumerate(cars_f):
         if p[0] == car_f:
-            return i
+            return ind
 
 
 cars_count = int(input())
@@ -18,37 +18,38 @@ while command != "Stop":
     command = command.split(" : ")
     action = command[0]
     car = command[1]
+    i = car_index(cars, car)
     if action == "Drive":
         distance = int(command[2])
         fuel = int(command[3])
-        if cars[car_index(cars, car)][2] < fuel:
+        if cars[i][2] < fuel:
             print("Not enough fuel to make that ride")
         else:
-            cars[car_index(cars, car)][1] += distance
-            cars[car_index(cars, car)][2] -= fuel
+            cars[i][1] += distance
+            cars[i][2] -= fuel
             print(f"{car} driven for {distance} kilometers. {fuel} liters of fuel consumed.")
-        if cars[car_index(cars, car)][1] > 100000:
+        if cars[i][1] > 100000:
             print(f"Time to sell the {car}!")
-            cars.pop(car_index(cars, car))
+            cars.pop(i)
 
     elif action == "Refuel":
         refuel = int(command[2])
         max_fuel = 75
-        if cars[car_index(cars, car)][2] + refuel > max_fuel:
-            refuel = refuel - (cars[car_index(cars, car)][2] + refuel - max_fuel)
-            cars[car_index(cars, car)][2] = 75
+        if cars[i][2] + refuel > max_fuel:
+            refuel = refuel - (cars[i][2] + refuel - max_fuel)
+            cars[i][2] = 75
         else:
-            cars[car_index(cars, car)][2] += refuel
+            cars[i][2] += refuel
         print(f"{car} refueled with {refuel} liters")
 
     elif action == "Revert":
         rev_kilometers = int(command[2])
         min_mileage = 10000
-        if cars[car_index(cars, car)][1] - rev_kilometers > min_mileage:
-            cars[car_index(cars, car)][1] -= rev_kilometers
+        if cars[i][1] - rev_kilometers > min_mileage:
+            cars[i][1] -= rev_kilometers
             print(f"{car} mileage decreased by {rev_kilometers} kilometers")
         else:
-            cars[car_index(cars, car)][1] = min_mileage
+            cars[i][1] = min_mileage
 
     command = input()
 
