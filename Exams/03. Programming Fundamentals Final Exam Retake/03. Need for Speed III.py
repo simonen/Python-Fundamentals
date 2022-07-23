@@ -19,6 +19,8 @@ while command != "Stop":
     action = command[0]
     car = command[1]
     i = car_index(cars, car)
+    #car_mileage = cars[i][1]
+    #car_tank = cars[i][2]
     if action == "Drive":
         distance = int(command[2])
         fuel = int(command[3])
