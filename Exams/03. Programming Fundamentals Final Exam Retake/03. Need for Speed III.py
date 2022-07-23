@@ -42,11 +42,11 @@ while command != "Stop":
         print(f"{car} refueled with {refuel} liters")
 
     elif action == "Revert":
-        take_kilometers = int(command[2])
+        rev_kilometers = int(command[2])
         min_mileage = 10000
-        if cars[car_index(cars, car)][1] - take_kilometers > min_mileage:
-            cars[car_index(cars, car)][1] -= take_kilometers
-            print(f"{car} mileage decreased by {take_kilometers} kilometers")
+        if cars[car_index(cars, car)][1] - rev_kilometers > min_mileage:
+            cars[car_index(cars, car)][1] -= rev_kilometers
+            print(f"{car} mileage decreased by {rev_kilometers} kilometers")
         else:
             cars[car_index(cars, car)][1] = min_mileage
 
