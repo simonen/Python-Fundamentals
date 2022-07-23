@@ -1,7 +1,7 @@
 def plant_index(plants_f, plant_f):
-    for i, p in enumerate(plants_f):
+    for ind, p in enumerate(plants_f):
         if p[0] == plant_f:
-            return i
+            return ind
 
 
 number = int(input())
@@ -19,21 +19,22 @@ command = input()
 while command != "Exhibition":
     action = command.split(": ")[0]
     plant = command.split(": ")[1].split(" - ")[0]
+    i = plant_index(plants, plant)
     if not any(plant in z for z in plants):
         print("error")
         command = input()
         continue
 
     if action == "Reset":
-        plants[plant_index(plants, plant)] = [plant, plants[plant_index(plants, plant)][1]]
+        plants[i] = [plant, plants[i][1]]
 
     elif action == "Update":
         new_rarity = command.split(": ")[1].split(" - ")[1]
-        plants[plant_index(plants, plant)][1] = new_rarity
+        plants[i][1] = new_rarity
 
     elif action == "Rate":
         rating = command.split(": ")[1].split(" - ")[1]
-        plants[plant_index(plants, plant)].append(rating)
+        plants[i].append(rating)
     else:
         print("error")
 
