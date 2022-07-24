@@ -1,5 +1,4 @@
 c_message = input()
-
 command = input()
 
 while command != "Reveal":
