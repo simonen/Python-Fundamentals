@@ -1,5 +1,4 @@
 password = input()
-
 command = input()
 
 while command != "Done":
