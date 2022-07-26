@@ -7,15 +7,13 @@ total_calories = 0
 item_list = []
 
 for m in match:
-    current_item = []
     food = m[1]
     date = m[3]
     calories = int(m[5])
     if 0 < calories <= 10000:
         total_calories += calories
 
-    current_item.append(f"Item: {food}, Best before: {date}, Nutrition: {calories}")
-    item_list.append(current_item)
+    item_list.append(f"Item: {food}, Best before: {date}, Nutrition: {calories}")
 
 print(f"You have food to last you for: {total_calories // 2000} days!")
 
