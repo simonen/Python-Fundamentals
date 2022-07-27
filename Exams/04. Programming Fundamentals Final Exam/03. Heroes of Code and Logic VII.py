@@ -7,7 +7,7 @@ def hero_index(heroes_f, hero_f):
 def stat_restore(hero_stat_f, max_stat_f, restored_f):
     restored = restored_f
     if hero_stat_f + restored > max_stat_f:
-        restored = restored - abs(max_stat_f - (hero_stat_f + restored))
+        restored = max_stat_f - hero_stat_f
     return restored
 
 
