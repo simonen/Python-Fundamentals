@@ -3,54 +3,40 @@ contests = {}
 
 while command != "end of contests":
     command = command.split(":")
-    contest = command[0]
-    password = command[1]
-    if contest not in contests.keys():
+    contest, password = command
+    if contest not in contests:
         contests[contest] = password
 
     command = input()
 
-
 command2 = input()
 submissions = {}
-students = []
 
 while command2 != "end of submissions":
     command2 = command2.split("=>")
-    contest = command2[0]
-    password = command2[1]
-    name = command2[2]
-    score = int(command2[3])
-    nscore = {contest: score}
-    if contest not in contests.keys() or contests[contest] != password:
+    contest, password, username, points = command2
+    if contest not in contests or password != contests[contest]:
         command2 = input()
         continue
 
-    if name not in submissions.keys():
-        submissions[name] = {}
-    if contest not in submissions[name]:
-        submissions[name] = {**nscore, **submissions[name]}
-
-    if submissions[name][contest] < score:
-        submissions[name][contest] = score
-    if name not in students:
-        students.append(name)
+    if username not in submissions:
+        submissions[username] = {}
+    if contest not in submissions[username] or submissions[username][contest] < int(points):
+        submissions[username][contest] = int(points)
 
     command2 = input()
 
-winner = ''
-max_sum = 0
+total_score = {}
 
-for s in students:
-    sum_v = sum(d for d in submissions[s].values())
-    if sum_v > max_sum:
-        max_sum = sum_v
-        winner = s
+for k, v in submissions.items():
+    total_score[k] = sum(v.values())
 
-print(f"Best candidate is {winner} with total {max_sum} points.")
+# best_student = [x,y for x, y in total_score.items() if y == max(total_score.values())]
+# print(list(total_score.keys())[list(total_score.values()).index(max(total_score.values()))])
+best_student = sorted(total_score.items(), key=lambda x: -x[1])
+print(f"Best candidate is {best_student[0][0]} with total {best_student[0][1]} points.")
 print("Ranking:")
-for s in sorted(students, key=lambda x: x[0]):
-    print(s)
-    sort_scores = sorted(submissions[s].items(), key=lambda x: x[1], reverse=True)
-    for i in sort_scores:
-        print(f"#  {i[0]} -> {i[1]}")
+for user, courses in sorted(submissions.items()):
+    print(user)
+    for course, points in sorted(courses.items(), key=lambda y: -y[1]):
+        print(f"#  {course} -> {points}")
