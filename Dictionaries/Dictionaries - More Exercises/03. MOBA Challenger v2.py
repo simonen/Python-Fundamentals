@@ -11,9 +11,7 @@ while command != "Season end":
         points = int(command[4])
         if player not in pool:
             pool[player] = {}
-        if position not in pool[player]:
-            pool[player][position] = 0
-        if pool[player][position] < points:
+        if position not in pool[player] or pool[player][position] < points:
             pool[player][position] = points
 
     elif action == "vs":
