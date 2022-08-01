@@ -3,7 +3,6 @@ legendary_item = ''
 is_found = False
 
 while True:
-    item = ''
     command = input().split()
     for i in range(0, len(command), 2):
         item = command[i + 1].lower()
