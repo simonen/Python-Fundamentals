@@ -1,6 +1,5 @@
 command = input()
 
-day = 0
 minerals = {}
 
 while command != "stop":
