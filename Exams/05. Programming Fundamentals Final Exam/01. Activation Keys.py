@@ -1,5 +1,3 @@
-import re
-
 key = input()
 command = input()
 
