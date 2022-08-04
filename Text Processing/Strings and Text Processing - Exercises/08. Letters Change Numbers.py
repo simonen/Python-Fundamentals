@@ -1,5 +1,3 @@
-import re
-
 upper = [chr(x) for x in range(65, 91)]
 lower = [chr(x) for x in range(97, 123)]
 
@@ -7,10 +5,9 @@ b = input().split()
 number = 0
 numbers = []
 for i in b:
-    match = re.findall(r"([a-zA-Z])([0-9]+)([a-zA-Z])", i)
-    f_letter = match[0][0]
-    number = int(match[0][1])
-    r_letter = match[0][2]
+    f_letter = i[0]
+    number = int(i[1:len(i) - 1])
+    r_letter = i[-1]
     if f_letter.isupper():
         number /= (upper.index(f_letter) + 1)
     elif f_letter.lower():
