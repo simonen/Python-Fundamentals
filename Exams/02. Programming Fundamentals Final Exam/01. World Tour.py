@@ -1,28 +1,28 @@
-stops = list(input())
+stops = input()
 command = input()
 
 while command != "Travel":
     command = command.split(":")
-    action = (command[0])
-
+    action = command[0]
     if action == "Add Stop":
         index = int(command[1])
-        city = command[2]
+        string = command[2]
         if 0 <= index < len(stops):
-            stops.insert(index, city)
-            stops = list("".join(stops))
+            stops = stops[:index] + string + stops[index::]
+
     elif action == "Remove Stop":
-        index = int(command[1])
+        start_index = int(command[1])
         end_index = int(command[2])
-        if (0 <= index < len(stops)) and (0 <= end_index < len(stops)):
-            stops = stops[:index] + stops[end_index + 1::]
+        if 0 <= start_index < len(stops) and 0 <= end_index < len(stops):
+            stops = stops[:start_index] + stops[end_index + 1::]
 
     elif action == "Switch":
-        old_city = command[1]
-        new_city = command[2]
-        stops = list(("".join(stops)).replace(old_city, new_city))
+        old_string = command[1]
+        new_sting = command[2]
+        stops = stops.replace(old_string, new_sting)
 
-    print(f"{''.join(stops)}")
+    print(stops)
+
     command = input()
 
-print(f"Ready for world tour! Planned stops: {''.join(stops)}")
+print(f"Ready for world tour! Planned stops: {stops}")
