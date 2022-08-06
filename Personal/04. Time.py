@@ -7,8 +7,11 @@ def calculate_time(start_time_f, time_taken_f):
     return f"{((total_secs_f // 3600) % 24):02d}:{((total_secs_f // 60) % 60):02d}:{(total_secs_f % 60):02d}"
 
 
-leave = input()
-time_taken = int(input())
+start_time = input()
+command = input()
 
-print(calculate_time(leave, time_taken))
-
+while command != "stop":
+    time_taken = int(command)
+    print(f"Time of arrival: {calculate_time(start_time, time_taken)}")
+    start_time = calculate_time(start_time, time_taken)
+    command = input()
