@@ -50,3 +50,5 @@ while command != "Stop":
 
 for piece in pieces:
     print(f"{piece[0]} -> Composer: {piece[1]}, Key: {piece[2]}")
+
+# print(sorted(pieces, key=lambda x: x[2]))
