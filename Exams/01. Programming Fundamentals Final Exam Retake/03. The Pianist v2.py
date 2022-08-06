@@ -22,21 +22,22 @@ while command != "Stop":
             print(f"{piece} by {composer} in {key} added to the collection!")
         else:
             print(f"{piece} is already in the collection!")
-        command = input()
-        continue
 
     elif action == "Remove":
         if piece in book:
             del book[piece]
             print(f"Successfully removed {piece}!")
+        else:
+            print(f"Invalid operation! {piece} does not exist in the collection.")
 
     elif action == "ChangeKey":
         new_key = command[2]
         if piece in book:
             book[piece]["Key"] = new_key
             print(f"Changed the key of {piece} to {new_key}!")
+        else:
+            print(f"Invalid operation! {piece} does not exist in the collection.")
 
-    print(f"Invalid operation! {piece} does not exist in the collection.")
     command = input()
 
 for piece in book:
