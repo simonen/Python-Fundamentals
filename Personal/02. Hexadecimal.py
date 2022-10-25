@@ -32,10 +32,11 @@ while mac_hex != "end":
     hex = mac_hex.split("-")
     for i in hex:
         try:
-            mac_binary.append("".join(dec_bin(hex_dec(i))))
-            print("-".join(mac_binary))
+            bin_num = "".join(dec_bin(hex_dec(i)))
+            mac_binary.append(f"{bin_num:0>8}")
         except ValueError as ve:
             print(ve)
+    print("-".join(mac_binary))
     mac_hex = input("Enter MAC address: ")
 
 # book = {10: "A", 11: "B", 12: "C", 13: "D", 14: "E", 15: "F"}
