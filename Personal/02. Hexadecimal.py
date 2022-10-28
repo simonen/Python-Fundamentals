@@ -22,9 +22,8 @@ def dec_bin(dec_num_f):
     return bin_list[::-1]
 
 
-print("### MAC Address-To-Binary Converter by don_simone ###")
-print("### Type 'end' to exit the program ###")
-# ex E8-11-32-4E-07-DB
+print(">>> HEX To Binary Converter <<< by don simone" )
+print("### MAC Example: E8-11-32-4E-07-DB. Type 'quit' ###")
 mac_hex = input("Enter MAC address: ")
 
 while mac_hex != "end":
