@@ -48,8 +48,12 @@ def print_addr(ip_f):
 while True:
     ip_dec = input("Enter IP address: ").split(".")
     cidr = int(input("Mask bits: "))
-    host_bits = 32 - cidr
 
+    if len(ip_dec) != 4 or (1 > cidr > 31):
+        print("Invalid IP address or mask")
+        continue
+
+    host_bits = 32 - cidr
     print("=> ", ".".join(ip_dec), ": ip address")
     subnet_dec = subnet_mask(cidr)[0]
     subnet_bin = subnet_mask(cidr)[1]
