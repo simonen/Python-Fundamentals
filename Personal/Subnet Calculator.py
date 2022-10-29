@@ -48,8 +48,9 @@ def print_addr(ip_f):
 while True:
     ip_dec = input("Enter IP address: ").split(".")
     cidr = int(input("Mask bits: "))
+    valid_ip = list(map(int, ip_dec))
 
-    if len(ip_dec) != 4 or (1 > cidr > 31):
+    if len(ip_dec) != 4 or (1 > cidr > 31) or any(x not in range(0, 256) for x in valid_ip):
         print("Invalid IP address or mask")
         continue
 
