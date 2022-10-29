@@ -1,7 +1,4 @@
 # Splits a string into n equal parts
-group_len = 8
-
-
 def str_splitter(string_f, group_len_f):
     grouped = []
     for i in range(0, len(string_f), group_len_f):
@@ -14,6 +11,7 @@ def str_splitter(string_f, group_len_f):
 ip_dec = input("Enter IP address: ").split(".")
 cidr = int(input("Mask bits: "))
 
+group_len = 8
 host_bits = 32 - cidr
 mask_dec = [0, 0, 0, 0]
 times = cidr // 8
@@ -21,7 +19,7 @@ remainder = cidr % 8
 for i in range(0, times):
     mask_dec[i] = 255
     if i + 1 < len(mask_dec):
-        mask_dec[i + 1] = f"{(256 - 2 ** (8 - remainder))}"
+        mask_dec[i + 1] = 256 - 2 ** (8 - remainder)
 
 print(ip_dec, "  ==>  ip address")
 print(mask_dec, "  ==>  subnet mask")
