@@ -35,9 +35,9 @@ def subnet(masked_addr_f, addr_type):
     elif addr_type == "last_ip":
         addr_bin = f"{masked_addr_f:1<32}"[:-1] + "0"
 
-    addr_oct = str_splitter(str(addr_bin))
-    addr_dec = [f"{int(x, 2)}" for x in addr_oct]
-    return addr_bin, addr_oct, addr_dec
+    addr_sep = str_splitter(str(addr_bin))
+    addr_dec = [f"{int(x, 2)}" for x in addr_sep]
+    return addr_bin, addr_sep, addr_dec
 
 
 def print_addr(ip_f):
@@ -45,15 +45,33 @@ def print_addr(ip_f):
         print("=> ", i)
 
 
+def valid_ip():
+    while True:
+        try:
+            ip_dec_f = input("Enter IPv4 address: ")
+            ip_dec_f = ip_dec_f.split(".")
+            if (len(ip_dec_f) == 4) and all(x in range(0, 256) for x in list(map(int, ip_dec_f))):
+                return ip_dec_f
+            print("Invalid IPv4 address")
+        except ValueError as ve:
+            print(ve)
+
+
+def valid_mask():
+    while True:
+        try:
+            cidr_f = int(input("Enter mask bits (1-31): "))
+            if int(cidr_f) in range(1, 32):
+                return int(cidr_f)
+            else:
+                print("Invalid mask")
+        except ValueError as ve:
+            print(ve)
+
+
 while True:
-    ip_dec = input("Enter IP address: ").split(".")
-    cidr = int(input("Mask bits: "))
-    valid_ip = list(map(int, ip_dec))
-
-    if len(ip_dec) != 4 or (1 > cidr > 31) or any(x not in range(0, 256) for x in valid_ip):
-        print("Invalid IP address or mask")
-        continue
-
+    ip_dec = valid_ip()
+    cidr = valid_mask()
     host_bits = 32 - cidr
     print("=> ", ".".join(ip_dec), ": ip address")
     subnet_dec = subnet_mask(cidr)[0]
