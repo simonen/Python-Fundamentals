@@ -37,7 +37,7 @@ def subnet(masked_addr_f, addr_type):
 
     addr_sep = str_splitter(str(addr_bin))
     addr_dec = [f"{int(x, 2)}" for x in addr_sep]
-    return addr_bin, addr_sep, addr_dec
+    return ".".join(addr_sep), ".".join(addr_dec)
 
 
 def print_addr(ip_f):
@@ -75,14 +75,17 @@ while True:
     host_bits = 32 - cidr
     print("=> ", ".".join(ip_dec), ": ip address")
     subnet_dec = subnet_mask(cidr)[0]
+    print("=> ", ".".join(subnet_dec), ": subnet mask")
     subnet_bin = subnet_mask(cidr)[1]
     ip_bin = list(map(lambda x: f"{int(x):08b}", ip_dec))
     # Isolate the network portion
     masked_addr = "".join(ip_bin)[:cidr]
-
-    print("=> ", ".".join(subnet_dec), ": subnet mask")
-    print("=> ", ip_bin, ": ip address binary")
-    print("=> ", subnet_bin, ": subnet mask binary")
+    print("=> ", masked_addr + "| " + "".join(ip_bin)[cidr::])
+    print("=> ", "".join(subnet_bin)[:cidr] + "| " + "".join(subnet_bin)[cidr::])
+    print("=> ", ".".join(ip_bin))
+    print("=> ", ".".join(subnet_bin))
+    # print("=> ", ip_bin, ": ip address binary")
+    # print("=> ", subnet_bin, ": subnet mask binary")
 
     print(colored("Network address", 'yellow'))
     print_addr(subnet(masked_addr, 'net_addr'))
