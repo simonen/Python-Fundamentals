@@ -26,8 +26,9 @@ def subnet(masked_addr_f, addr_type):
     addr_dec = [f"{int(x, 2)}" for x in addr_sep]
 
     ip_f = ".".join(addr_sep), ".".join(addr_dec)
-    for i in ip_f:
-        print("=> ", i)
+    # for i in ip_f:
+    #     print("=> ", i)
+    return ".".join(addr_dec)
 
 
 def valid_ip():
@@ -67,21 +68,21 @@ while True:
     # Isolate the network portion
     masked_addr = "".join(ip_bin)[:cidr]
     print("=> ", ".".join(ip_bin), ": ip binary")
-    print("=> ", ".".join(netmask_oct),  ': netmask binary')
+    print("=> ", ".".join(netmask_oct), ': netmask binary')
     print("=> ", masked_addr + "|  " + "".join(ip_bin)[cidr::], ":", host_bits, "host bits")
     print("=> ", "".join(netmask_bin)[:cidr] + "|  " + "".join(netmask_bin)[cidr::], ":", cidr, "network bits")
 
     print(colored("Network address", 'yellow'))
-    subnet(masked_addr, 'net_addr')
+    print(subnet(masked_addr, 'net_addr'))
 
     print(colored("Broadcast address", 'yellow'))
-    subnet(masked_addr, 'broad_addr')
+    print(subnet(masked_addr, 'broad_addr'))
 
     print(colored("First usable IP address", 'yellow'))
-    subnet(masked_addr, 'first_ip')
+    print(subnet(masked_addr, 'first_ip'))
 
     print(colored("Last usable IP address", 'yellow'))
-    subnet(masked_addr, 'last_ip')
+    print(subnet(masked_addr, 'last_ip'))
 
     print(colored("Total number of hosts", 'yellow'))
     total_addr = 2 ** host_bits
@@ -89,5 +90,21 @@ while True:
     print(colored("Usable IP hosts addresses", 'yellow'))
     usable_ips = 2 ** host_bits - 2
     print("=> ", usable_ips)
-    print(colored(f"Total number of subnets for /{cidr} networks", 'yellow'))
-    print("=> ", 2 ** (cidr % 8))
+    octet = cidr // 8
+    net_addr = ".".join(ip_dec[:octet]) + f"{'.0'}" * (4 - octet)
+    print(colored(f"All of the possible /{cidr} networks for {net_addr}", 'yellow'))
+    borrowed_bits = cidr % 8
+    subnets_count = 2 ** borrowed_bits
+    print("=> ", subnets_count)
+    # print(ip_wildcard)
+    bin_table = [128, 64, 32, 16, 8, 4, 2, 1]
+    network = 0
+    net_addr = net_addr.split(".")
+    for _ in range(0, subnets_count):
+        net_addr[octet] = network
+        value = map(str, net_addr)
+        va_bin = list(map(lambda x: f"{int(x):08b}", value))
+        masked = "".join(va_bin)[:cidr]
+
+        print(".".join(map(str, net_addr)), "-", subnet(masked, 'first_ip'), "-", subnet(masked, 'last_ip'), '-', subnet(masked, 'broad_addr'))
+        network += bin_table[borrowed_bits - 1]
