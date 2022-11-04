@@ -21,37 +21,44 @@ def ip_calc(ip_f, addr_type):
     elif addr_type == "last_ip":
         addr_bin = f"{masked_addr:1<32}"[:-1] + "0"
 
-    addr_sep = str_splitter(str(addr_bin))
+    addr_sep = str_splitter(addr_bin)
     addr_dec = [f"{int(x, 2)}" for x in addr_sep]
 
     return ".".join(addr_dec)
 
 
-ip = "192.168.44.0"
-cidr = 26
+ip = "192.168.44.56"
+cidr = 24
 host_bits = 32 - cidr
 octet = cidr // 8
-print(ip)
-netmask_bin = f"{('1' * cidr):0<32}"
-netmask_oct = str_splitter(netmask_bin)
-print(".".join([f"{int(x, 2)}" for x in netmask_oct]), "subnet mask")
-print(netmask_oct, "subnet mask")
-print(ip_calc(ip, "net_addr"), 'network address.')
-print(ip_calc(ip, "broad_addr"), 'broadcast address')
-print(ip_calc(ip, "first_ip"), 'first usable host')
-print(ip_calc(ip, "last_ip"), 'last usable host')
-
 borrowed_bits = cidr % 8
 subnets_count = 2 ** borrowed_bits
-print("=> ", subnets_count, 'subnets')
+total_addr = 2 ** host_bits
+usable_ips = total_addr - 2
+print(f"{ip : <15} | {'ip address' : <10}")
+netmask_bin = f"{('1' * cidr):0<32}"
+netmask_oct = str_splitter(netmask_bin)
+print(".".join([f"{int(x, 2)}" for x in netmask_oct]), 'subnet mask')
+print(".".join(netmask_oct), "subnet mask")
+print(f"{ip_calc(ip, 'net_addr') : <15} | {'network address' : <10}")
+print(f"{ip_calc(ip, 'broad_addr') : <15} | {'broadcast address' : <10}")
+print(f"{ip_calc(ip, 'first_ip') : <15} | {'first usable host' : <10}")
+print(f"{ip_calc(ip, 'last_ip') : <15} | {'last usable host' : <10}")
+print()
+print("Total number of hosts")
+print("=> ", total_addr)
+print("Usable IP hosts addresses")
+print("=> ", usable_ips)
+print()
 bin_table = [128, 64, 32, 16, 8, 4, 2, 1]
 network = 0
-
 base_network = ip_calc(ip, 'net_addr').split(".")
-print(f"All of the possible /{cidr} networks for {base_network}")
+print(f"All of the {subnets_count} possible /{cidr} networks for {'.'.join(base_network)}")
+print(f"{'[Network Address]'} | {'[First Usable Address]'} | {'[Last Usable Address]'} | {'[Broadcast Address]'}")
+
 for _ in range(0, subnets_count):
-    base_network[octet] = str(network)
+    base_network[octet] = str(network) # !!!!!
     base_network = ".".join(base_network)
-    print(base_network.center(5), "|", ip_calc(base_network, 'first_ip'), "|", ip_calc(base_network, 'last_ip'), "|", ip_calc(base_network, 'broad_addr'))
+    print(f"{base_network : <17} | {ip_calc(base_network, 'first_ip') : <22} | {ip_calc(base_network, 'last_ip') : <21} | {ip_calc(base_network, 'broad_addr') : <14}")
     network += bin_table[borrowed_bits - 1]
     base_network = base_network.split(".")
