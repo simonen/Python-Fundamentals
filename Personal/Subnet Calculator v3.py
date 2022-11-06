@@ -37,9 +37,9 @@ def str_split2(string_ff, index_f):
 
 def cidr_dotted(cidr_f, bin_dec_f):
     netmask_bin_f = f"{('1' * cidr_f):0<32}"
-    netmask_oct = str_splitter(netmask_bin_f)
+    netmask_dotted = str_splitter(netmask_bin_f)
     netmask_bin_str = ".".join(str_splitter(netmask_bin_f))
-    netmask_dec_str = ".".join([f"{int(x, 2)}" for x in netmask_oct])
+    netmask_dec_str = ".".join([f"{int(x, 2)}" for x in netmask_dotted])
     if bin_dec_f == "bin":
         return netmask_bin_str
     elif bin_dec_f == "dec":
@@ -79,7 +79,7 @@ bin_table = [128, 64, 32, 16, 8, 4, 2, 1]
 network = 0
 base_network = ip_calc(ip_dec, 'net_addr').split(".")
 print(f"All of the {subnets_count} possible /{cidr} networks for {'.'.join(base_network)}")
-print(f"{'Network Address'} | {'[First Usable Address]'} | {'[Last Usable Address]'} | {'[Broadcast Address]'}")
+print(f"{'Network Address' : <17} | {'First Usable Address' : ^15} | {'Last Usable Address'} | {'Broadcast Address'}")
 
 for _ in range(0, subnets_count):
     base_network[octet] = str(network) # !!!!!
