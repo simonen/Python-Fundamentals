@@ -46,19 +46,22 @@ def cidr_dotted(cidr_f, bin_dec_f):
     return netmask_dec_str
 
 
-ip_dec = "192.168.44.77".split(".")
+ip_dec = "192.168.44.56".split(".")
 cidr = 26
 octet = cidr // 8
 
 netmask_dec = cidr_dotted(cidr, 'dec')
 netmask_bin = cidr_dotted(cidr, 'bin')
 index = netmask_bin.find("0")
-print('.'.join(ip_dec))
-print(netmask_dec)
-ip_bin = [f"{x:08b}" for x in map(int, ip_dec)]
-print(str_split2(".".join(ip_bin), index))
+ip_bin = ".".join([f"{x:08b}" for x in map(int, ip_dec)])
+print(f"{'### Subnet Calculator v0.1 by don_simone ###': <30}")
+print('ip address', "-" * 80)
+print(f"{'.'.join(ip_dec)}")
+print(str_split2(ip_bin, index))
+print(f"{'subnet mask' : <15} {netmask_dec}")
+print(f"{'cidr notation': <15} {'.'.join(ip_dec)} /{cidr}")
 print(str_split2(netmask_bin, index))
-print('network', "-" * (80) )
+print('network', "-" * 80)
 net_addr = ip_calc(ip_dec, 'net_addr', 'dec')
 net_addr_bin = ip_calc(ip_dec, 'net_addr', 'bin')
 print(net_addr[1])
@@ -93,5 +96,10 @@ bin_table = [128, 64, 32, 16, 8, 4, 2, 1]
 for _ in range(subnet_count):
     net_addr[0][octet] = str(network)
     print("-" * 88)
-    print(f"{'.'.join(net_addr[0]) : <17} | {ip_calc(net_addr[0], 'first_ip', 'dec')[1] : ^15}-{ip_calc(net_addr[0], 'last_ip', 'dec')[1] : ^17} | {ip_calc(net_addr[0], 'broad_addr', 'dec')[1]}")
+    marked = ''
+    start = int(ip_calc(net_addr[0], 'first_ip', 'dec')[0][-1])
+    end = int(ip_calc(net_addr[0], 'last_ip', 'dec')[0][-1])
+    if start < int(ip_dec[-1]) < end:
+        marked = "*"
+    print(f"{'.'.join(net_addr[0]) : <17} | {ip_calc(net_addr[0], 'first_ip', 'dec')[1] : ^15}-{ip_calc(net_addr[0], 'last_ip', 'dec')[1] : ^17} | {ip_calc(net_addr[0], 'broad_addr', 'dec')[1]}  {marked}")
     network += bin_table[cidr % 8 - 1]
