@@ -44,8 +44,8 @@ def cidr_dotted(cidr_f, bin_dec_f):
     return netmask_dec_str
 
 
-ip_dec = "192.168.63.255".split(".")
-cidr = 24
+ip_dec = "192.168.63.191".split(".")
+cidr = 27
 octet = cidr // 8
 
 netmask_dec = cidr_dotted(cidr, 'dec')
@@ -56,55 +56,47 @@ net_addr = ip_calc(ip_dec, 'net_addr', 'dec')
 net_addr_bin = ip_calc(ip_dec, 'net_addr', 'bin')
 broad_addr = ip_calc(ip_dec, 'broad_addr', 'dec')
 broad_addr_bin = ip_calc(ip_dec, 'broad_addr', 'bin')
-print(f"{'### Subnet Calculator v0.1 by don_simone ###': <30}")
-print('ip address', "-" * 80)
+first_host = ip_calc(ip_dec, 'first_ip', 'dec')
+first_host_bin = ip_calc(ip_dec, 'first_ip', 'bin')
+dashes = 85
+print(f"{'### IPv4 Subnet Calculator v0.1 by don_simone ###': <30}")
+print("-" * dashes)
+print(f"{'.'.join(ip_dec)} /{cidr}")
+print("-" * dashes)
 address = 'host address'
 if '.'.join(ip_dec) == net_addr[1]:
     address = 'network address'
 elif '.'.join(ip_dec) == broad_addr[1]:
     address = 'broadcast address'
-print(f"{'.'.join(ip_dec) : <21} {address}")
-print(f"{netmask_dec : <21} {'subnet mask'} ")
-print(f"/{cidr : <20} {'cidr notation'}")
-print(str_split2(ip_bin, index))
-print(str_split2(netmask_bin, index))
-
-print('network', "-" * 80)
-print(net_addr[1])
-print(net_addr_bin[1])
-print('broadcast', "-" * 78)
-print(broad_addr[1])
-print(broad_addr_bin[1])
-print('first usable host', "-" * 70)
-first_host = ip_calc(ip_dec, 'first_ip', 'dec')
-first_host_bin = ip_calc(ip_dec, 'first_ip', 'bin')
-print(first_host[1])
-print(first_host_bin[1])
+print(f"{address : <21} {'.'.join(ip_dec) : <21} {str_split2(ip_bin, index)}")
+print(f"{'subnet mask' : <21} {netmask_dec : <21} {str_split2(netmask_bin, index)}")
+# print(f"{'cidr notation' : <21} /{cidr} ")
+print(f"{'network address' : <21} {net_addr[1] : <21} {net_addr_bin[1]}")
+print(f"{'broadcast address' : <21} {broad_addr[1] : <21} {broad_addr_bin[1]}")
+print(f"{'first host' : <21} {first_host[1] : <21} {first_host_bin[1]}")
 last_host = ip_calc(ip_dec, 'last_ip', 'dec')
 last_host_bin = ip_calc(ip_dec, 'last_ip', 'bin')
-print('last usable host', "-" * 71)
-print(last_host[1])
-print(last_host_bin[1])
+print(f"{'last host' : <21} {last_host[1] : <21} {last_host_bin[1]}")
 subnet_count = 2 ** (cidr % 8)
-print("-" * 88)
+print("-" * dashes)
 host_bits = 32 - cidr
 total_addr = 2 ** host_bits
 usable_ips = total_addr - 2
-print(f"{total_addr} total addresses \n"
-      f"{usable_ips} usable host addresses ")
-print("-" * 88)
+print(f"{'total addresses' : <21} {total_addr}  \n"
+      f"{'host addresses' : <21} {usable_ips}")
+print("-" * dashes)
 print(f"All of the {subnet_count} possible /{cidr} networks for {'.'.join(ip_dec[:octet]) + '.*' * (4 - octet)}")
-# print("-" * 88)
-print(f"{'Network Address' : <16} | {'Range of Usable Host Addresses' : ^34} | {'Broadcast Address': <15}")
+print()
+print(f"{'network address' : <18} | {'range of usable host addresses' : ^35} | {'broadcast address': <18}")
 network = 0
 bin_table = [128, 64, 32, 16, 8, 4, 2, 1]
 for _ in range(subnet_count):
     net_addr[0][octet] = str(network)
-    print("-" * 88)
+    print("-" * dashes)
     marked = ''
     start = int(ip_calc(net_addr[0], 'first_ip', 'dec')[0][octet])
     end = int(ip_calc(net_addr[0], 'last_ip', 'dec')[0][octet])
     if start < int(ip_dec[octet]) < end:
         marked = "*"
-    print(f"{'.'.join(net_addr[0]) : <16} | {ip_calc(net_addr[0], 'first_ip', 'dec')[1] : ^16}-{ip_calc(net_addr[0], 'last_ip', 'dec')[1] : ^17} | {ip_calc(net_addr[0], 'broad_addr', 'dec')[1]} {marked : <35}")
+    print(f"{'.'.join(net_addr[0]) : <18} | {ip_calc(net_addr[0], 'first_ip', 'dec')[1]:^16} - {ip_calc(net_addr[0], 'last_ip', 'dec')[1] : ^16} | {ip_calc(net_addr[0], 'broad_addr', 'dec')[1]} {marked}")
     network += bin_table[cidr % 8 - 1]
