@@ -66,8 +66,8 @@ def cidr_dotted(cidr_f, bin_dec_f):
     return netmask_dec_str
 
 
-ip = "192.168.0.0".split(".")
-cidr = 16
+ip = "192.168.255.254".split(".")
+cidr = 25
 octet = cidr // 8
 
 netmask_dec = cidr_dotted(cidr, 'dec')
@@ -112,7 +112,7 @@ print(f"{'total addresses' : <21} {total_addr}  \n"
 print(char * dashes)
 print(f"All of the {subnet_count} possible /{cidr} networks for {'.'.join(ip[:octet]) + '.*' * (4 - octet)}")
 print()
-print(f"{'network address' : <18} | {'range of usable host addresses' : ^35} | {'broadcast address': <18}")
+print(f"{'network address' : <18} | {'range of usable host addresses' : ^39} | {'broadcast address': <18}")
 network = 0
 bin_table = [128, 64, 32, 16, 8, 4, 2, 1]
 for _ in range(subnet_count):
@@ -123,5 +123,5 @@ for _ in range(subnet_count):
     end = int(ip_calc(net_addr[0], 'last_ip', 'dec')[0][octet])
     if start < int(ip[octet]) < end:
         marked = "*"
-    print(f"{'.'.join(net_addr[0]) : <18} | {ip_calc(net_addr[0], 'first_ip', 'dec')[1]:^16} - {ip_calc(net_addr[0], 'last_ip', 'dec')[1] : ^16} | {ip_calc(net_addr[0], 'broad_addr', 'dec')[1]} {marked}")
+    print(f"{'.'.join(net_addr[0]) : <18} | {ip_calc(net_addr[0], 'first_ip', 'dec')[1]: >18} - {ip_calc(net_addr[0], 'last_ip', 'dec')[1] : <18} | {ip_calc(net_addr[0], 'broad_addr', 'dec')[1]} {marked}")
     network += bin_table[cidr % 8 - 1]
