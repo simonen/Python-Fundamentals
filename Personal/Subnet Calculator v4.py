@@ -20,6 +20,28 @@ def ip_calc(ip_f, addr_type, bin_dec_f):
     return addr_dec, ".".join(addr_dec)
 
 
+def ip_class(ip_bin_f):
+    addr_class = ''
+    if ip_bin_f[0] == "0":
+        addr_class = "A"
+    elif ip_bin_f[:2] == "10":
+        addr_class = "B"
+    elif ip_bin_f[:3] == "110":
+        addr_class = "C"
+    elif ip_bin_f[:4] == "1110":
+        addr_class = "D"
+
+    return addr_class
+
+
+def ip_scope(ip_bin_f, ip_f):
+    scope = 'public'
+    if ip_f[0] == '10' or (ip_f[0] == "172" and ip_bin_f[9:13] == "0001") or (ip_f[0] == "192" and ip_f[1] == '168'):
+        scope = 'private'
+
+    return scope
+
+
 def str_splitter(string_f):
     grouped = []
     for i in range(0, len(string_f), 8):
@@ -44,59 +66,62 @@ def cidr_dotted(cidr_f, bin_dec_f):
     return netmask_dec_str
 
 
-ip_dec = "192.168.63.191".split(".")
-cidr = 27
+ip = "192.168.0.0".split(".")
+cidr = 16
 octet = cidr // 8
 
 netmask_dec = cidr_dotted(cidr, 'dec')
 netmask_bin = cidr_dotted(cidr, 'bin')
 index = netmask_bin.find("0")
-ip_bin = ".".join([f"{x:08b}" for x in map(int, ip_dec)])
-net_addr = ip_calc(ip_dec, 'net_addr', 'dec')
-net_addr_bin = ip_calc(ip_dec, 'net_addr', 'bin')
-broad_addr = ip_calc(ip_dec, 'broad_addr', 'dec')
-broad_addr_bin = ip_calc(ip_dec, 'broad_addr', 'bin')
-first_host = ip_calc(ip_dec, 'first_ip', 'dec')
-first_host_bin = ip_calc(ip_dec, 'first_ip', 'bin')
+ip_dec = '.'.join(ip)
+ip_bin = '.'.join([f"{x:08b}" for x in map(int, ip)])
+net_addr = ip_calc(ip, 'net_addr', 'dec')
+net_addr_bin = ip_calc(ip, 'net_addr', 'bin')
+broad_addr = ip_calc(ip, 'broad_addr', 'dec')
+broad_addr_bin = ip_calc(ip, 'broad_addr', 'bin')
+first_host = ip_calc(ip, 'first_ip', 'dec')
+first_host_bin = ip_calc(ip, 'first_ip', 'bin')
 dashes = 85
+char = '='
 print(f"{'### IPv4 Subnet Calculator v0.1 by don_simone ###': <30}")
-print("-" * dashes)
-print(f"{'.'.join(ip_dec)} /{cidr}")
-print("-" * dashes)
+print(char * dashes)
+print(f"{ip_dec} /{cidr}")
+print(char * dashes)
 address = 'host address'
-if '.'.join(ip_dec) == net_addr[1]:
+if ip_dec == net_addr[1]:
     address = 'network address'
-elif '.'.join(ip_dec) == broad_addr[1]:
+elif ip_dec == broad_addr[1]:
     address = 'broadcast address'
-print(f"{address : <21} {'.'.join(ip_dec) : <21} {str_split2(ip_bin, index)}")
+print(f"{address : <21} {ip_dec : <21} {str_split2(ip_bin, index)}")
 print(f"{'subnet mask' : <21} {netmask_dec : <21} {str_split2(netmask_bin, index)}")
-# print(f"{'cidr notation' : <21} /{cidr} ")
 print(f"{'network address' : <21} {net_addr[1] : <21} {net_addr_bin[1]}")
 print(f"{'broadcast address' : <21} {broad_addr[1] : <21} {broad_addr_bin[1]}")
 print(f"{'first host' : <21} {first_host[1] : <21} {first_host_bin[1]}")
-last_host = ip_calc(ip_dec, 'last_ip', 'dec')
-last_host_bin = ip_calc(ip_dec, 'last_ip', 'bin')
+last_host = ip_calc(ip, 'last_ip', 'dec')
+last_host_bin = ip_calc(ip, 'last_ip', 'bin')
 print(f"{'last host' : <21} {last_host[1] : <21} {last_host_bin[1]}")
+print(f"{'class' : <21} {ip_class(ip_bin)}")
+print(f"{'scope' : <21} {ip_scope(ip_bin, ip)}")
 subnet_count = 2 ** (cidr % 8)
-print("-" * dashes)
+print(char * dashes)
 host_bits = 32 - cidr
 total_addr = 2 ** host_bits
 usable_ips = total_addr - 2
 print(f"{'total addresses' : <21} {total_addr}  \n"
       f"{'host addresses' : <21} {usable_ips}")
-print("-" * dashes)
-print(f"All of the {subnet_count} possible /{cidr} networks for {'.'.join(ip_dec[:octet]) + '.*' * (4 - octet)}")
+print(char * dashes)
+print(f"All of the {subnet_count} possible /{cidr} networks for {'.'.join(ip[:octet]) + '.*' * (4 - octet)}")
 print()
 print(f"{'network address' : <18} | {'range of usable host addresses' : ^35} | {'broadcast address': <18}")
 network = 0
 bin_table = [128, 64, 32, 16, 8, 4, 2, 1]
 for _ in range(subnet_count):
     net_addr[0][octet] = str(network)
-    print("-" * dashes)
+    print(char * dashes)
     marked = ''
     start = int(ip_calc(net_addr[0], 'first_ip', 'dec')[0][octet])
     end = int(ip_calc(net_addr[0], 'last_ip', 'dec')[0][octet])
-    if start < int(ip_dec[octet]) < end:
+    if start < int(ip[octet]) < end:
         marked = "*"
     print(f"{'.'.join(net_addr[0]) : <18} | {ip_calc(net_addr[0], 'first_ip', 'dec')[1]:^16} - {ip_calc(net_addr[0], 'last_ip', 'dec')[1] : ^16} | {ip_calc(net_addr[0], 'broad_addr', 'dec')[1]} {marked}")
     network += bin_table[cidr % 8 - 1]
