@@ -69,11 +69,11 @@ def cidr_dotted(cidr_f, bin_dec_f):
 def valid_ip():
     while True:
         try:
-            ip_dec_f = input("Enter IPv4 address: ")
+            ip_dec_f = input(" Enter IPv4 address: ")
             ip_dec_f = ip_dec_f.split(".")
             if (len(ip_dec_f) == 4) and all(x in range(0, 256) for x in list(map(int, ip_dec_f))):
                 return ip_dec_f
-            print("Invalid IPv4 address!")
+            print(" Invalid IPv4 address!")
             print()
         except ValueError as ve:
             print(ve)
@@ -82,7 +82,7 @@ def valid_ip():
 def valid_mask():
     while True:
         try:
-            cidr_f = int(input("Enter mask bits (8-30): "))
+            cidr_f = int(input(" Enter mask bits (8-30): "))
             if int(cidr_f) in range(8, 32):
                 return int(cidr_f)
             else:
@@ -113,7 +113,9 @@ while True:
     last_host = ip_calc(ip, 'last_ip', 'dec')
     last_host_bin = ip_calc(ip, 'last_ip', 'bin')
     wildcard_dec = [str(255 - int(x)) for x in netmask_dec.split(".")]
-    wildcard_bin = [f"{x:08b}" for x in map(int, wildcard_dec)]
+    wildcard_bin = ".".join([f"{x:08b}" for x in map(int, wildcard_dec)])
+    hex_id = ".".join([f"{x:02x}" for x in map(int, ip)])
+    arpa = ".".join([x for x in ip[::-1]])
     subnet_count = 2 ** (cidr % 8)
     host_bits = 32 - cidr
     total_addr = 2 ** host_bits
@@ -122,7 +124,7 @@ while True:
     char = '='
 
     print(char * dashes)
-    print(f"{ip_dec} /{cidr}")
+    print(f" {ip_dec} /{cidr}")
     print(char * dashes)
 
     address = 'host address'
@@ -131,35 +133,38 @@ while True:
     elif ip_dec == broad_addr[1]:
         address = 'broadcast address'
 
-    print(f"{address : <21} {ip_dec : <21} {str_split2(ip_bin, index)}")
-    print(f"{'subnet mask' : <21} {netmask_dec : <21} {str_split2(netmask_bin, index)}")
-    print(f"{'network address' : <21} {net_addr[1] : <21} {net_addr_bin[1]}")
-    print(f"{'broadcast address' : <21} {broad_addr[1] : <21} {broad_addr_bin[1]}")
-    print(f"{'first host' : <21} {first_host[1] : <21} {first_host_bin[1]}")
-    print(f"{'last host' : <21} {last_host[1] : <21} {last_host_bin[1]}")
-    print(f"{'wildcard mask' : <21} {'.'.join(wildcard_dec) :<21} {'.'.join(wildcard_bin)}")
-    print(f"{'class' : <21} {ip_class(ip_bin)}")
-    print(f"{'scope' : <21} {ip_scope(ip_bin, ip)}")
-    print(char * dashes)
+    print(f" {address : <21} {ip_dec : <21} {str_split2(ip_bin, index)}")
+    print(f" {'subnet mask' : <21} {netmask_dec : <21} {str_split2(netmask_bin, index)}")
+    print(f" {'network address' : <21} {net_addr[1] : <21} {net_addr_bin[1]}")
+    print(f" {'broadcast address' : <21} {broad_addr[1] : <21} {broad_addr_bin[1]}")
+    print(f" {'first host' : <21} {first_host[1] : <21} {first_host_bin[1]}")
+    print(f" {'last host' : <21} {last_host[1] : <21} {last_host_bin[1]}")
+    print(f" {'wildcard mask' : <21} {'.'.join(wildcard_dec) :<21} {wildcard_bin}")
+    print("-" * dashes)
+    print(f" {'class' : <21} {ip_class(ip_bin)}")
+    print(f" {'scope' : <21} {ip_scope(ip_bin, ip)}")
+    print(f" {'hex id' : <21} 0x{hex_id}")
+    print(f" {'in-addr.arpa' : <21} {arpa}.in-addr.arpa")
+    print("-" * dashes)
 
-    print(f"{'total addresses' : <21} {total_addr}  \n"
-          f"{'host addresses' : <21} {usable_ips}")
+    print(f" {'total addresses' : <21} {total_addr}  \n"
+          f" {'host addresses' : <21} {usable_ips}")
 
     print(char * dashes)
-    print(f"All of the {subnet_count} possible /{cidr} networks for {'.'.join(ip[:octet]) + '.*' * (4 - octet)}")
-    print()
-    print(f"{'network address' : <18} | {'range of usable host addresses' : ^39} | {'broadcast address': <18}")
+    print(f" All of the {subnet_count} possible /{cidr} networks for {'.'.join(ip[:octet]) + '.*' * (4 - octet)}")
+    print(char * dashes)
+    print(f" {'network address' : <18} | {'range of usable host addresses' : ^39} | {'broadcast address': <18}")
 
     network = 0
     bin_table = [128, 64, 32, 16, 8, 4, 2, 1]
     for _ in range(subnet_count):
         net_addr[0][octet] = str(network)
-        print(char * dashes)
+        print("-" * dashes)
         marked = ''
         start = int(ip_calc(net_addr[0], 'first_ip', 'dec')[0][octet])
         end = int(ip_calc(net_addr[0], 'last_ip', 'dec')[0][octet])
         if start < int(ip[octet]) < end:
             marked = "*"
-        print(f"{'.'.join(net_addr[0]) : <18} | {ip_calc(net_addr[0], 'first_ip', 'dec')[1]: >18} - {ip_calc(net_addr[0], 'last_ip', 'dec')[1] : <18} | {ip_calc(net_addr[0], 'broad_addr', 'dec')[1]} {marked}")
+        print(f" {'.'.join(net_addr[0]) : <18} | {ip_calc(net_addr[0], 'first_ip', 'dec')[1]: >18} - {ip_calc(net_addr[0], 'last_ip', 'dec')[1] : <18} | {ip_calc(net_addr[0], 'broad_addr', 'dec')[1]} {marked}")
         network += bin_table[cidr % 8 - 1]
     print()
