@@ -13,6 +13,7 @@ def score_calc(pract_f, theory_f):
         print("Invalid points")
         print()
 
+
 print("### Computer Networking Fundamentals Score Calculator ### by don_simone")
 print()
 
