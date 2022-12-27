@@ -51,7 +51,7 @@ def b64_decode(b64_keys_f, splitter_f):
     print('octets: ', octets)
     ascii_decimal = [int(x, 2) for x in octets]
     print('ascii decimals: ', ascii_decimal)
-    decoded_chars = [chr(x) for x in ascii_decimal]
+    decoded_chars = [chr(x) for x in ascii_decimal if x in range(10, 128)]
 
     return "".join(decoded_chars)
 
@@ -98,8 +98,8 @@ def keys(b64_table_f, b64_string_f):
 msg = input()
 
 deco = b64_decode(keys(b64_table, msg), str_splitter)
-# chur = deco.decode('ascii')
+
 
 print(deco)
-# print(chur)
+
 # print(keys(b64_table, input()))
