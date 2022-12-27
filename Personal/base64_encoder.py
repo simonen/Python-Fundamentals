@@ -38,19 +38,25 @@ def str_splitter(string_f):
     return grouped
 
 
-while True:
+def multiline_text():
     contents = []
     while True:
         try:
             line = input()
+            if line == "encode":
+                break
         except EOFError:
             break
         if len(contents) > 0:
             contents.append('\n' + line)
         else:
             contents.append(line)
-    print(contents)
 
-    contentz = "".join(contents)
-    encoded = b64_encode(contentz, b64_table, str_splitter)
+    return "".join(contents)
+
+
+while True:
+    text = multiline_text()
+    encoded = b64_encode(text, b64_table, str_splitter)
     print("".join(encoded))
+
