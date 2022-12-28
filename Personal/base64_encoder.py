@@ -51,6 +51,7 @@ def b64_decode(b64_keys_f, splitter_f):
     print('octets: ', octets)
     ascii_decimal = [int(x, 2) for x in octets]
     print('ascii decimals: ', ascii_decimal)
+    print('lines: ', ascii_decimal.count(10) + 1)
     decoded_chars = [chr(x) for x in ascii_decimal if x in range(10, 128)]
 
     return "".join(decoded_chars)
