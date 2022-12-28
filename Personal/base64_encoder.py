@@ -5,17 +5,6 @@ index_lower = [x for x in range(26, 52)]
 digits = [str(x) for x in range(0, 10)]
 index_digits = [x for x in range(52, 62)]
 
-b64_table = dict(zip(index_upper, upper))
-lower_dict = dict(zip(index_lower, lower))
-digits_dict = dict(zip(index_digits, digits))
-chars = {62: '+', 63: "/"}
-
-b64_table.update(lower_dict)
-b64_table.update(digits_dict)
-b64_table.update(chars)
-
-# print('base64 table: ', b64_table)
-
 
 def b64_encode(input_f, b64_table_f, splitter_f):
     # print(input_f)
@@ -46,8 +35,9 @@ def b64_encode(input_f, b64_table_f, splitter_f):
     return b64_encoded
 
 
-def b64_decode(b64_keys_f, splitter_f):
-    sextets = [f"{x:06b}" for x in b64_keys_f]
+def b64_decode(input_f, b64_table_f, splitter_f):
+    b64_dec = [b64_table_f[x] for x in input_f]
+    sextets = [f"{x:06b}" for x in b64_dec]
     # print('sextets: ', sextets)
     sextets_conc = "".join(sextets)
     # print('sextets conc: ', sextets_conc)
@@ -55,7 +45,7 @@ def b64_decode(b64_keys_f, splitter_f):
     # print('octets: ', octets)
     ascii_decimal = [int(x, 2) for x in octets]
     # print('ascii decimals: ', ascii_decimal)
-    print('string length: ', len(b64_keys_f))
+    print('string length: ', len(b64_table_f))
     print('text blocks: ', ascii_decimal.count(10) + 1)
     decoded_chars = [chr(x) for x in ascii_decimal if x in range(10, 128)]
     return "".join(decoded_chars)
@@ -73,7 +63,8 @@ def multiline_text():
     contents = []
     while True:
         try:
-            line = input("Enter text to encode: ")
+            line = input("Enter string to encode: ")
+            print()
             if line == "enc":
                 break
         except EOFError:
@@ -86,26 +77,30 @@ def multiline_text():
     return contents
 
 
-def keys(b64_table_f, b64_string_f):
-    b64_keys = []
-    for char in b64_string_f:
-        if str(char) in b64_table_f.values():
-            b64_keys.append((list(b64_table_f.keys())[list(b64_table_f.values()).index(char)]))
-    return b64_keys
-
-
+command = input('encode or decode? ')
 while True:
     print()
-    command = input("Encode or Decode? ")
-    if command == "decode":
-        msg = input("Enter string to decode: ")
-        decoded = b64_decode(keys(b64_table, msg), str_splitter)
-        print()
-        print(decoded)
-    elif command == "encode":
+    if command == 'encode':
+        b64_table = dict(zip(index_upper, upper))
+        b64_table.update(dict(zip(index_lower, lower)))
+        b64_table.update(dict(zip(index_digits, digits)))
+        chars = {62: '+', 63: "/"}
+        b64_table.update(chars)
         text = multiline_text()
         encoded = b64_encode("".join(text), b64_table, str_splitter)
         print('text blocks: ', len(text))
         print()
         print('encoded string: ', "".join(encoded))
-
+    elif command == "decode":
+        b64_table = dict(zip(upper, index_upper))
+        b64_table.update(dict(zip(lower, index_lower)))
+        b64_table.update(dict(zip(digits, index_digits)))
+        chars = {"+": 62, "/": 63}
+        b64_table.update(chars)
+        text = input("Enter string to decode: ")
+        decoded = b64_decode(text, b64_table, str_splitter)
+        print()
+        print(decoded)
+    # print('base64 table: ', b64_table)
+    print()
+    command = input('encode or decode? ')
