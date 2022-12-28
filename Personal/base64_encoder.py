@@ -1,4 +1,3 @@
-
 upper = [chr(x) for x in range(65, 91)]
 lower = [chr(x) for x in range(97, 123)]
 index_upper = [x for x in range(0, 26)]
@@ -15,23 +14,29 @@ b64_table.update(lower_dict)
 b64_table.update(digits_dict)
 b64_table.update(chars)
 
-# print('base64 table: ', b64_table)
+print('base64 table: ', b64_table)
 
 
 def b64_encode(input_f, b64_table_f, splitter_f):
-    ascii_dec = [ord(x) for x in input_f]
-    print('ascii decimals: ', ascii_dec)
+    # print(input_f)
+    ascii_dec = []
+    for s in input_f:
+        if ord(s) < 128:
+            ascii_dec.append(ord(s))
+        else:
+            p = s.encode("utf8")
+            ascii_dec.extend(p)
+
+    # print('ascii decimals: ', ascii_dec)
     octets = [f'{x:08b}' for x in ascii_dec]
-    print('binary octets: ', octets)
+    # print('binary octets: ', octets)
     octets_concatenated = "".join(octets)
-    print('concatenated binary: ', octets_concatenated)
     if len(octets_concatenated) % 6 != 0:
         octets_concatenated += "0" * (6 - (len(octets_concatenated) % 6))
-
-    sextets = splitter_f(octets_concatenated)
-    print('binary sextets: ', sextets)
+    sextets = splitter_f(octets_concatenated, 6)
+    # print('binary sextets: ', sextets)
     b64_dec = [int(x, 2) for x in sextets]
-    print('base64 decimals: ', b64_dec)
+    # print('base64 decimals: ', b64_dec)
     b64_encoded = [str(b64_table_f[x]) for x in b64_dec]
     padding = ''
     if len(b64_encoded) % 4 != 0:
@@ -42,25 +47,24 @@ def b64_encode(input_f, b64_table_f, splitter_f):
 
 
 def b64_decode(b64_keys_f, splitter_f):
-    print('string length: ', len(b64_keys_f))
     sextets = [f"{x:06b}" for x in b64_keys_f]
-    print('sextets: ', sextets)
+    # print('sextets: ', sextets)
     sextets_conc = "".join(sextets)
-    print('sextets conc: ', sextets_conc)
-    octets = splitter_f(sextets_conc)
-    print('octets: ', octets)
+    # print('sextets conc: ', sextets_conc)
+    octets = splitter_f(sextets_conc, 8)
+    # print('octets: ', octets)
     ascii_decimal = [int(x, 2) for x in octets]
-    print('ascii decimals: ', ascii_decimal)
-    print('lines: ', ascii_decimal.count(10) + 1)
+    # print('ascii decimals: ', ascii_decimal)
+    print('string length: ', len(b64_keys_f))
+    print('text blocks: ', ascii_decimal.count(10) + 1)
     decoded_chars = [chr(x) for x in ascii_decimal if x in range(10, 128)]
-
     return "".join(decoded_chars)
 
 
-def str_splitter(string_f):
+def str_splitter(string_f, byte_size_f):
     grouped = []
-    for i in range(0, len(string_f), 8):
-        chunk = string_f[i:i + 8]
+    for i in range(0, len(string_f), byte_size_f):
+        chunk = string_f[i:i + byte_size_f]
         grouped.append(chunk)
     return grouped
 
@@ -69,17 +73,17 @@ def multiline_text():
     contents = []
     while True:
         try:
-            line = input()
+            line = input("Enter text to encode.: ")
             if line == "enc":
                 break
         except EOFError:
             break
+        #appends \n to list items to mark a new line
         if len(contents) > 0:
             contents.append('\n' + line)
         else:
             contents.append(line)
-
-    return "".join(contents)
+    return contents
 
 
 def keys(b64_table_f, b64_string_f):
@@ -89,18 +93,18 @@ def keys(b64_table_f, b64_string_f):
             b64_keys.append((list(b64_table_f.keys())[list(b64_table_f.values()).index(char)]))
     return b64_keys
 
-# while True:
-#     text = multiline_text()
-#     encoded = b64_encode(text, b64_table, str_splitter)
-#     print('string length: ', len(text))
-#     print('encoded string: ', "".join(encoded))
-#
 
-msg = input()
+while True:
+    command = input("Encode or Decode? ")
+    if command == "decode":
+        msg = input("Enter string to decode: ")
+        decoded = b64_decode(keys(b64_table, msg), str_splitter)
+        print()
+        print(decoded)
+    elif command == "encode":
+        text = multiline_text()
+        encoded = b64_encode("".join(text), b64_table, str_splitter)
+        print('text blocks: ', len(text))
+        print()
+        print('encoded string: ', "".join(encoded))
 
-deco = b64_decode(keys(b64_table, msg), str_splitter)
-
-
-print(deco)
-
-# print(keys(b64_table, input()))
