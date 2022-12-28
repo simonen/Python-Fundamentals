@@ -14,7 +14,7 @@ b64_table.update(lower_dict)
 b64_table.update(digits_dict)
 b64_table.update(chars)
 
-print('base64 table: ', b64_table)
+# print('base64 table: ', b64_table)
 
 
 def b64_encode(input_f, b64_table_f, splitter_f):
@@ -73,8 +73,7 @@ def multiline_text():
     contents = []
     while True:
         try:
-            line = input("Enter text to encode.: ")
-            print()
+            line = input("Enter text to encode: ")
             if line == "enc":
                 break
         except EOFError:
@@ -109,3 +108,4 @@ while True:
         print('text blocks: ', len(text))
         print()
         print('encoded string: ', "".join(encoded))
+
