@@ -74,6 +74,7 @@ def multiline_text():
     while True:
         try:
             line = input("Enter text to encode.: ")
+            print()
             if line == "enc":
                 break
         except EOFError:
@@ -95,6 +96,7 @@ def keys(b64_table_f, b64_string_f):
 
 
 while True:
+    print()
     command = input("Encode or Decode? ")
     if command == "decode":
         msg = input("Enter string to decode: ")
@@ -107,4 +109,3 @@ while True:
         print('text blocks: ', len(text))
         print()
         print('encoded string: ', "".join(encoded))
-
