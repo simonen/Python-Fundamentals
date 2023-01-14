@@ -19,7 +19,6 @@ def caesar_decrypt(lower_f, upper_f, cipher_lower_f, cipher_upper_f, string_f):
             decrypted += upper_f[cipher_upper_f.index(j)]
         else:
             decrypted += j
-
     return decrypted
 
 
