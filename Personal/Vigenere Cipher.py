@@ -19,23 +19,20 @@ def special_symbols(res_f, plaintext_f, upper_f):
 
 
 upper = [chr(x) for x in range(65, 91)]
-# print(upper)
 
 while True:
     command = input("encode or decode?: ")
     keyword = list(input("enter key: ").upper())
     plaintext = list(input("enter text to encode / decode: ").upper())
     ratio = ceil(len(plaintext) / len(keyword))
-    keyword = keyword * ratio
-    key = keyword[:len(plaintext)]
+    keyword_repeated = keyword * ratio
+    key = keyword_repeated[:len(plaintext)]
     idx_plain = [upper.index(x) for x in plaintext if x in upper]
     idx_key = [upper.index(x) for x in key]
     res = ''
     if command == "encode":
         res = vigenere_encode(idx_plain, idx_key, upper)
-        # print(res)
     elif command == "decode":
         res = vigenere_decode(idx_plain, idx_key, upper)
-        # print(res)
 
     print(special_symbols(res, plaintext, upper))
