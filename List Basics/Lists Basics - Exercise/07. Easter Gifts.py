@@ -1,32 +1,20 @@
-gifts = input()
+gifts = input().split()
 command = input()
 
-gift_list = gifts.split(" ")
-
 while command != "No Money":
+    command = command.split()
+    action = command[0]
+    gift = command[1]
+    if action == 'OutOfStock':
+        gifts = ["None" if x == gift else x for x in gifts]
+    elif action == "Required":
+        index = int(command[2])
+        if 0 <= index < len(gifts):
+            gifts[index] = gift
+    elif action == "JustInCase":
+        gifts[-1] = gift
 
-    com_list = command.split()
-    gift = com_list[1]
-    if "Required" in com_list:
-        given_index = int(com_list[2])
-        length = len(gift_list)
-        if 0 <= given_index < length:
-            gift_list.pop(given_index)
-            gift_list.insert(given_index, gift)
-    if "OutOfStock" in com_list:
-        for _ in range(len(gift_list)):
-            if gift in gift_list:
-                g_index = gift_list.index(gift)
-                gift_list.pop(g_index)
-                gift_list.insert(g_index, "None")
-    elif "JustInCase" in com_list:
-        gift_list.pop()
-        gift_list.append(gift)
     command = input()
 
-for _ in range(len(gift_list)):
-    if "None" in gift_list:
-        g_index = gift_list.index("None")
-        gift_list.pop(g_index)
-
-print(" ".join(gift_list))
+gifts = [x for x in gifts if x != "None"]
+print(" ".join(gifts))
