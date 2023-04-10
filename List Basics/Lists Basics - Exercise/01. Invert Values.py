@@ -1,4 +1,2 @@
-numbers = input().split()
-
-print(list(map(lambda x: int(x) * -1, numbers)))
+print(list(map(lambda x: int(x) * -1, input().split())))
 
