@@ -1,13 +1,13 @@
-digits = list(map(int, input().split(", ")))
-zeroz = [0 for x in range(0, digits.count(0))]
-non_zeroes = [x for x in digits if x != 0]
-non_zeroes.extend(zeroz)
-print(non_zeroes)
+integers = input()
 
-# Variant 2
-for i in digits:
-    if i == 0:
-        digits.remove(i)
-        digits.append(i)
+A = integers.split(", ")
+B = []
+C = []
 
-print(digits)
+for num in A:
+    if int(num) != 0:
+        B.append(int(num))
+    else:
+        C.append(int(num))
+
+print(B + C)
