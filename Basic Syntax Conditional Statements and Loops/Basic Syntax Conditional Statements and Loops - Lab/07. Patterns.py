@@ -1,7 +1,11 @@
-n = int(input())
+stars = int(input())
 
-for i in range(1, n + 1):
-    print(f"*" * i)
+for row in range(1, stars + 1):
+    for i in range(1, row + 1):
+        print("*", end="")
+    print()
 
-for j in range(n - 1, 0, -1):
-    print(f"*" * j)
+for row2 in range(1, stars):
+    for j in range(stars - row2 + 1, 1, -1):
+        print("*", end="")
+    print()
