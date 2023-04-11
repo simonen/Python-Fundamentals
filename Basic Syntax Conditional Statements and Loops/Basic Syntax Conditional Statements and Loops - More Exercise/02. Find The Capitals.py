@@ -1,8 +1,10 @@
-text = list(input())
-indices = []
+import string
 
-for i, l in enumerate(text):
-    if ord(l) in range(65, 91):
-        indices.append(i)
+word = input()
+upper = string.ascii_uppercase
 
-print(indices)
+upper_index = []
+for index, letter in enumerate(word):
+    if letter in upper:
+        upper_index.append(index)
+print(upper_index)
