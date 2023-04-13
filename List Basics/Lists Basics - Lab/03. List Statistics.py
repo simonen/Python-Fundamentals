@@ -7,7 +7,7 @@ for _ in range(n):
     number = int(input())
     if number >= 0:
         positives.append(number)
-    elif number < 0:
+    else:
         negatives.append(number)
 
 print(positives)
